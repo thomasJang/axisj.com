@@ -1,21 +1,23 @@
 "use client";
 
 import * as React from "react";
-import { useEffect, useRef, useState } from "react";
+import {useCallback, useEffect, useRef, useState} from "react";
 import styled from "@emotion/styled";
 import Link from "next/link";
-import { LogoAXSymbol } from "@/app/components/common/LogoAXSymbol";
-import LangSelector from "@/app/components/common/LangSelector";
+import { LogoAXSymbol } from "@/components/common/LogoAXSymbol";
+import LangSelector from "@/components/common/LangSelector";
 import { PageContainer } from "@/styles/Layouts";
-import { Button, Drawer, Menu, Space } from "antd";
+import {Button, Drawer, Menu, Progress, Space} from "antd";
 import {
   useChangeLocale,
   useCurrentLocale,
   useI18n,
   useScopedI18n,
 } from "@/locales/client";
-import { IconMenu } from "@/app/components/common/IconMenu";
+import { IconMenu } from "@/components/common/IconMenu";
 import { mediaMax } from "@/styles/media";
+import {ScrollIndicator} from "@/components/common/ScrollIndicator";
+import {useAppStore} from "@/store/useAppStore";
 
 interface Props {}
 
@@ -25,9 +27,10 @@ export function Header({}: Props) {
   const cl = useCurrentLocale(); // 현재 언어
   const changeLocale = useChangeLocale(); // 언어 변경하기
   const [isOpen, setIsOpen] = useState(false);
-
   const [scroll, setScroll] = useState(false);
+  const [scrollPercent, setScrollPercent] = React.useState(0);
   const headerWrapRef = useRef() as React.MutableRefObject<HTMLDivElement>;
+  const visualHeight = useAppStore(state => state.visualHeight);
 
   const items = [
     {
@@ -35,8 +38,8 @@ export function Header({}: Props) {
       label: t("axisj"),
     },
     {
-      key: "notice",
-      label: t("notice"),
+      key: "service",
+      label: t("service"),
     },
     {
       key: "solution",
@@ -52,11 +55,12 @@ export function Header({}: Props) {
     },
   ];
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const headerWarpHeight = headerWrapRef.current?.clientHeight;
-    const heightGap = window.innerHeight - headerWarpHeight;
+    const heightGap = visualHeight - headerWarpHeight;
     setScroll(window.scrollY > heightGap);
-  };
+    setScrollPercent(window.scrollY / (window.document.body.clientHeight - window.innerHeight) * 100);
+  }, [visualHeight]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -64,10 +68,12 @@ export function Header({}: Props) {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [handleScroll]);
 
   return (
     <Layer className={scroll ? "scrolled" : ""} ref={headerWrapRef}>
+      <ScrollIndicator percent={scrollPercent} />
+
       <Container>
         <div className={"gnbWrapper"}>
           <div className={"left"}>
@@ -159,6 +165,15 @@ const Layer = styled.div`
 
   &.scrolled {
     background: rgba(255, 255, 255, 0.9);
+    .gnbWrapper {
+      .logo {
+        svg {
+          path {
+            fill: var(--ax_text_black);
+          }
+        }
+      }
+    }
   }
 
   .gnbWrapper {
@@ -262,6 +277,7 @@ const Layer = styled.div`
     .ant-menu-title-content {
     }
   }
+  
 `;
 
 const MobileMenuWrap = styled.div`

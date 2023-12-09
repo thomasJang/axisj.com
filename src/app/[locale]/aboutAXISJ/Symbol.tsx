@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "@emotion/styled";
 import { PageContainer } from "@/styles/Layouts";
 import { media } from "@/styles/media";
-import { LogoAXSymbol } from "@/app/components/common/LogoAXSymbol";
+import { LogoAXSymbol } from "@/components/common/LogoAXSymbol";
 import { useI18n } from "@/locales/client";
 
 interface Props {}

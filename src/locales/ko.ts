@@ -5,9 +5,10 @@ export default {
   welcome: "Hello {name}!",
   "menu.axisj": "액시스제이",
   "menu.notice": "공지사항",
-  "menu.solution": "솔루션",
+  "menu.service": "사업분야",
+  "menu.solution": "액스프레임",
   "menu.design": "디자인",
-  "menu.contact": "ContactUs",
+  "menu.contact": "연락처",
   "menu.group.lang": "언어선택",
 
   "hero-title-1": "Pioneering a dot",

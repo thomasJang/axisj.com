@@ -6,6 +6,7 @@ import styled from "@emotion/styled";
 import { History } from "@/app/[locale]/aboutAXISJ/History";
 import { Symbol } from "@/app/[locale]/aboutAXISJ/Symbol";
 import { Design } from "@/app/[locale]/design/Design";
+import {useAppStore} from "@/store/useAppStore";
 
 interface Props {
   params: {
@@ -14,7 +15,8 @@ interface Props {
 }
 
 function Home({ params: { locale } }: Props) {
-  const [visualHeight, setVisualHeight] = useState(0);
+  const setVisualHeight = useAppStore(state => state.setVisualHeight);
+  const visualHeight = useAppStore(state => state.visualHeight);
   return (
     <main>
       <MainVisual onChangeVisualHeight={(height) => setVisualHeight(height)} />

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { LangEn } from "@/app/components/common/LangEn";
-import { LangKo } from "@/app/components/common/LangKo";
+import { LangEn } from "@/components/common/LangEn";
+import { LangKo } from "@/components/common/LangKo";
 import { useChangeLocale, useCurrentLocale } from "@/locales/client";
 
 interface Props {

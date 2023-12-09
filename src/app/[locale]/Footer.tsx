@@ -7,8 +7,8 @@ import { Col, Divider, Row, Select } from "antd";
 import Link from "next/link";
 import { mediaMax } from "@/styles/media";
 import { useI18n } from "@/locales/client";
-import { IconInstagram } from "@/app/components/common/IconInstagram";
-import { IconGithub } from "@/app/components/common/IconGithub";
+import { IconInstagram } from "@/components/common/IconInstagram";
+import { IconGithub } from "@/components/common/IconGithub";
 
 interface Props {}
 

@@ -2,12 +2,12 @@ import * as React from "react";
 import styled from "@emotion/styled";
 import { PageContainer } from "@/styles/Layouts";
 import { mediaMax } from "@/styles/media";
-import { IconDesign } from "@/app/components/common/IconDesign";
+import { IconDesign } from "@/components/common/IconDesign";
 import { Col, Row } from "antd";
-import { IconDesign1 } from "@/app/components/common/IconDesign1";
-import { IconDesign2 } from "@/app/components/common/IconDesign2";
-import { IconDesign3 } from "@/app/components/common/IconDesign3";
-import { IconDesign4 } from "@/app/components/common/IconDesign4";
+import { IconDesign1 } from "@/components/common/IconDesign1";
+import { IconDesign2 } from "@/components/common/IconDesign2";
+import { IconDesign3 } from "@/components/common/IconDesign3";
+import { IconDesign4 } from "@/components/common/IconDesign4";
 import { dangerouslySetInnerHTML } from "@/utils/string/dangerouslySetInnerHTML";
 import { useI18n } from "@/locales/client";
 

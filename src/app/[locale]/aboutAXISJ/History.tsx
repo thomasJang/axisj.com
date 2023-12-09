@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { PageContainer } from "@/styles/Layouts";
 import { mediaMax } from "@/styles/media";
 import { useI18n } from "@/locales/client";
-import { LogoAXSymbol } from "@/app/components/common/LogoAXSymbol";
+import { LogoAXSymbol } from "@/components/common/LogoAXSymbol";
 
 interface Props {}
 

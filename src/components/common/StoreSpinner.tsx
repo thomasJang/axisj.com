@@ -12,7 +12,7 @@ const StoreSpinner: React.FC<IProps> = ({ spinning }) => {
 
   React.useEffect(() => {
     if (spinning) {
-      timer.current = window.setTimeout(() => setPercent(percent + 1), 30);
+      timer.current = window.setTimeout(() => setPercent(percent + 1), 40);
     }
   }, [percent, spinning]);
 

@@ -4,8 +4,9 @@ import type { ReactNode } from "react";
 import * as React from "react";
 import { useEffect } from "react";
 import { I18nProviderClient, useCurrentLocale } from "@/locales/client";
-import { Loading } from "@/app/components/common/Loading";
+import { Loading } from "@/components/common/Loading";
 import { ConfigProvider } from "antd";
+import {StoreSpinner} from "@/components/common/StoreSpinner";
 
 type ProviderProps = {
   children: ReactNode;
@@ -27,7 +28,7 @@ export function Providers({ children }: ProviderProps) {
         },
       }}
     >
-      <I18nProviderClient locale={locale} fallback={<p>Loading...</p>}>
+      <I18nProviderClient locale={locale} fallback={<StoreSpinner spinning />}>
         {children}
       </I18nProviderClient>
     </ConfigProvider>
