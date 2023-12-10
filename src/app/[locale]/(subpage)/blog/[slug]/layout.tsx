@@ -6,7 +6,7 @@ import { Metadata } from "next";
 
 export async function generateStaticParams() {
   const posts = await getPosts();
-  return posts.map((post) => ({ slug: post.slug }));
+  return posts.map((post) => ({ params: { slug: post.slug } }));
 }
 
 export const generateMetadata = async ({
