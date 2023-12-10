@@ -164,6 +164,7 @@ const Div = styled.div`
         h1{
           font-size:2rem;
           display: inline-block;
+          color: var(--txt-display);
         }
         p{
           font-size:1.125rem;
@@ -171,6 +172,7 @@ const Div = styled.div`
           word-break:keep-all;
           display: inline-block;
           padding:1rem 0;
+          color: var(--txt-body);
         }
       }
     }

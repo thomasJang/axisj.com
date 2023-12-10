@@ -4,7 +4,7 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font: "Gmarket Sans", "NotoSansKR", "sans-serif";
+  --font: "GmarketSans", "NotoSansKR", "sans-serif";
 
   --foreground: #606060;
   --background: #fff;
@@ -50,11 +50,11 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground));
+  color: var(--black);
   background: var(--background);
   font-size: 16px;
   overflow-x: hidden;
-  font-family: "Gmarket Sans", "NotoSansKR", "sans-serif";
+  font-family: var(--font);
 }
 
 h1 {
@@ -91,7 +91,7 @@ a {
 }
 
 [class^='ant-col']{
-  font-family: "Gmarket Sans", "NotoSansKR", "sans-serif";
+  font-family: var(--font);
 }
 
 

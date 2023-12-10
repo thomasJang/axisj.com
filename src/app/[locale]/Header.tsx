@@ -19,6 +19,7 @@ import { mediaMax } from "@/styles/media";
 import { ScrollIndicator } from "@/components/common/ScrollIndicator";
 import { useAppStore } from "@/store/useAppStore";
 import { useRouter } from "next/navigation";
+import {ArrowRightOutlined} from "@ant-design/icons";
 
 interface Props {}
 
@@ -38,37 +39,22 @@ export function Header({}: Props) {
     {
       key: "axisj",
       label: t("axisj"),
-      onClick: () => {
-        router.push(`/${cl}#AXISJ`);
-      },
     },
     {
       key: "service",
       label: t("service"),
-      onClick: () => {
-        router.push(`/${cl}#SERVICE`);
-      },
     },
     {
       key: "solution",
       label: t("solution"),
-      onClick: () => {
-        router.push(`/${cl}#AXFRAME`);
-      },
     },
     {
       key: "contact",
       label: t("contact"),
-      onClick: () => {
-        router.push(`/${cl}#CONTACT`);
-      },
     },
     {
       key: "blog",
       label: t("blog"),
-      onClick: () => {
-        router.push("/blog");
-      },
     },
   ];
 
@@ -82,6 +68,40 @@ export function Header({}: Props) {
         100
     );
   }, [visualHeight]);
+
+  const onClickMenu = useCallback((info: any) => {
+    switch (info.key) {
+      case "axisj":{
+        router.push(`/${cl}#AXISJ`);
+        break;
+      }
+      case "service":{
+        router.push(`/${cl}#SERVICE`);
+        break;
+      }
+      case "solution":{
+        router.push(`/${cl}#AXFRAME`);
+        break;
+      }
+      case "contact":{
+        router.push(`/${cl}#CONTACT`);
+        break;
+      }
+      case "blog":{
+        router.push("/blog");
+        break;
+      }
+      case "ko":{
+        changeLocale("ko");
+        break;
+      }
+      case "en":{
+        changeLocale("en");
+        break;
+      }
+    }
+    setIsOpen(false);
+  }, [changeLocale, cl, router]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -103,7 +123,7 @@ export function Header({}: Props) {
             </Link>
           </div>
           <div className={"center"}>
-            <Menu mode="horizontal" items={items} />
+            <Menu mode="horizontal" selectedKeys={[]} items={items} onClick={onClickMenu} />
           </div>
           <div className={"right show-sm"}>
             <LangSelector size={"1.5rem"} />
@@ -120,25 +140,19 @@ export function Header({}: Props) {
       </Container>
 
       <Drawer
-        title="AXISJ"
+        title="AXISJ.com"
         placement="right"
         onClose={() => {
           setIsOpen(false);
         }}
-        closable={false}
+        closable={true}
         open={isOpen}
         styles={{
           body: {
             padding: 10,
           },
         }}
-        extra={
-          <Space>
-            <Button type="link" onClick={() => {}} className={"menuButton"}>
-              {/*<IconMenuClose width={24} height={24} fill={`${colors.ax_text_black}`} />*/}
-            </Button>
-          </Space>
-        }
+        closeIcon={<ArrowRightOutlined />}
       >
         <MobileMenuWrap>
           <Menu
@@ -153,18 +167,13 @@ export function Header({}: Props) {
               {
                 label: `한국어`,
                 key: "ko",
-                onClick: () => {
-                  changeLocale("ko");
-                },
               },
               {
                 label: `English`,
                 key: "en",
-                onClick: () => {
-                  changeLocale("en");
-                },
               },
             ]}
+            onClick={onClickMenu}
           />
         </MobileMenuWrap>
       </Drawer>
@@ -190,7 +199,7 @@ const Layer = styled.div`
       .logo {
         svg {
           path {
-            fill: var(--ax_text_black);
+            fill: var(--black);
           }
         }
       }
@@ -205,6 +214,7 @@ const Layer = styled.div`
     height: 5.5rem;
     ${mediaMax.md} {
       height: 3rem;
+      padding-top: 3px;
     }
 
     .logo {
@@ -272,7 +282,7 @@ const Layer = styled.div`
   //ANTD Override....
   .ant-menu {
     //ul...
-    font-family: "Gmarket Sans", "NotoSansKR", "sans-serif";
+    font-family: var(--font);
     flex-grow: 1;
     flex-shrink: 1;
     align-items: center;
@@ -306,5 +316,9 @@ const MobileMenuWrap = styled.div`
   }
   .ant-menu-item {
     margin: 4px 0;
+    font-weight: 700;
+  }
+  .ant-menu-item-selected, .ant-menu-item-active {
+    background: var(--ax_gray_1);
   }
 `;

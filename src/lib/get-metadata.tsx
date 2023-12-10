@@ -28,7 +28,7 @@ export function getMetadata({
 
   return (
     <>
-      {title.indexOf("Max Leiter") > -1 ? (
+      {title.indexOf("Thomas Jang") > -1 ? (
         <title>{title}</title>
       ) : (
         <title>{`${title} - ${author}`}</title>

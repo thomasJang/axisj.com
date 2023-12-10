@@ -56,15 +56,14 @@ const Container = styled.div<Props>`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
+    border-radius: 20px;
 
     ${({ size, theme }) => {
       if (size === "normal") {
         return css`
-          padding: 14px 14px;
-          background-color: #e8e8e8;
-          font-size: 13px;
-          color: #888;
+          padding: 20px;
+          font-size: 14px;
+          color: var(--ax_space_blue);
         `;
       }
     }}
@@ -76,9 +75,9 @@ const Container = styled.div<Props>`
     ${({ size }) => {
       if (size === "normal") {
         return css`
-          width: 3em;
-          height: 3em;
-          margin: 0.3em;
+          width: 2em;
+          height: 2em;
+          margin: 1em;
         `;
       } else if (size === "small") {
         return css`
@@ -97,7 +96,7 @@ const Container = styled.div<Props>`
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      border: 0.3em solid transparent;
+      border: 0.5em solid transparent;
     }
 
     &:after {
@@ -109,7 +108,7 @@ const Container = styled.div<Props>`
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      border-color: #ccc transparent transparent;
+      border-color: var(--ax_space_blue) transparent transparent;
       border-style: solid;
       border-width: 0.3em;
       -webkit-box-shadow: 0 0 0 1px transparent;
