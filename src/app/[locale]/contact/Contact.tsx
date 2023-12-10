@@ -1,0 +1,131 @@
+import * as React from "react";
+import styled from "@emotion/styled";
+import { PageContainer } from "@/styles/Layouts";
+import { useI18n, useScopedI18n } from "@/locales/client";
+import { IconDesign1 } from "@/components/common/IconDesign1";
+import { IconDesign2 } from "@/components/common/IconDesign2";
+import { IconDesign3 } from "@/components/common/IconDesign3";
+import { IconDesign4 } from "@/components/common/IconDesign4";
+import { Button, Col, Row, Space } from "antd";
+import { dangerouslySetInnerHTML } from "@/utils/string/dangerouslySetInnerHTML";
+import Image from "next/image";
+import { SMixinFlexColumn, SMixinFlexRow } from "@/styles/emotion";
+import { mediaMax } from "@/styles/media";
+import { LinkOutlined } from "@ant-design/icons";
+
+interface Props {}
+
+export function Contact({}: Props) {
+  const t = useScopedI18n("contact");
+
+  return (
+    <Layer>
+      <Container>
+        <h2>{t("tit")}</h2>
+
+        <Row>
+          <Col sm={24} lg={24} xl={{ offset: 2, span: 20 }}>
+            <Row
+              gutter={[
+                { xs: 16, sm: 16, md: 32, lg: 64 },
+                { xs: 16, sm: 16, md: 64 },
+              ]}
+            >
+              <Col sm={24} md={12}>
+                <img
+                  src={"/images/axisj-map.png"}
+                  alt={"AXISJ MAP"}
+                  style={{ width: "100%", borderRadius: 10 }}
+                />
+              </Col>
+              <Col sm={24} md={12}>
+                <dl>
+                  <dt>{t("address")}</dt>
+                  <dd>
+                    <p>서울 영등포구 양평로14길 13 3층</p>
+                    <p>3F, 13, Yangpyeong-ro 14-gil, Yeongdeungpo-gu, Seoul.</p>
+                  </dd>
+                  <dt>{t("zipcode")}</dt>
+                  <dd>
+                    <p>07222</p>
+                  </dd>
+                  <dt>{t("tel")}</dt>
+                  <dd>
+                    <p>+82 02-2088-5725</p>
+                  </dd>
+                  <dt>{t("email")}</dt>
+                  <dd>
+                    <p>sales@axisj.com</p>
+                  </dd>
+                </dl>
+
+                <ButtonWrap>
+                  <Button
+                    icon={<LinkOutlined />}
+                    onClick={() => {
+                      window.open("https://naver.me/xiw19Q1h", "_blank");
+                    }}
+                  >
+                    NAVER 지도
+                  </Button>
+                  <Button
+                    icon={<LinkOutlined />}
+                    onClick={() => {
+                      window.open("https://kko.to/QiXd4lAnyd", "_blank");
+                    }}
+                  >
+                    DAUM 지도
+                  </Button>
+                </ButtonWrap>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Container>
+    </Layer>
+  );
+}
+
+const Container = styled(PageContainer)``;
+const Layer = styled.div`
+  background: var(--line-gr);
+  border-top: 1px solid var(--border-color);
+
+  padding: 5rem 2rem;
+
+  ${mediaMax.md} {
+    padding: 3rem 1rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  dl {
+  }
+  dt {
+    font-weight: 700;
+    margin-top: 1rem;
+  }
+  dd {
+    padding: 0.5rem 0;
+    p {
+      font-size: 1.1rem;
+      line-height: 1.4rem;
+      color: var(--txt-body);
+    }
+  }
+`;
+const ButtonWrap = styled.div`
+  ${SMixinFlexRow("flex-start", "center")};
+  gap: 1rem;
+  padding: 1rem 0;
+`;

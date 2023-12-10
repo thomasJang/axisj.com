@@ -93,3 +93,17 @@ a {
 [class^='ant-col']{
   font-family: "Gmarket Sans", "NotoSansKR", "sans-serif";
 }
+
+
+
+.anchorPoint {
+  scroll-margin-top: 3rem;
+}
+.anchorPoint.home {
+  scroll-margin-top: 1000rem;
+}
+@media (min-width: 768px) {
+  .anchorPoint {
+    scroll-margin-top: 5.5rem;
+  }
+}

@@ -19,6 +19,13 @@ export function History({}: Props) {
 
         <div className={"timeline"}>
           <ul>
+            <li className={"li-5 right"}>
+              <div className={"historyBox"}>
+                <span className={"ball red"}></span>
+                <span className={"textYear"}>2023.10</span>
+                <span className={"textDone"}>{t("history-text-6")}</span>
+              </div>
+            </li>
             <li className={"li-5 right"} style={{ marginBottom: 20 }}>
               <div className={"historyBox"}>
                 <span className={"ball red"}></span>
@@ -81,6 +88,7 @@ const Container = styled(PageContainer)``;
 
 const Layer = styled.div`
   padding: 5rem 0;
+  background: var(--line-gr);
 
   h2 {
     text-align: center;
@@ -124,6 +132,8 @@ const Layer = styled.div`
   }
 
   .timeline {
+    position: relative;
+    z-index: 1;
     .historyBox {
       font-size: 0.875rem;
       line-height: 1rem;

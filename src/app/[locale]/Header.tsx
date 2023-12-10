@@ -1,13 +1,13 @@
 "use client";
 
 import * as React from "react";
-import {useCallback, useEffect, useRef, useState} from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import styled from "@emotion/styled";
 import Link from "next/link";
 import { LogoAXSymbol } from "@/components/common/LogoAXSymbol";
 import LangSelector from "@/components/common/LangSelector";
 import { PageContainer } from "@/styles/Layouts";
-import {Button, Drawer, Menu, Progress, Space} from "antd";
+import { Button, Drawer, Menu, Progress, Space } from "antd";
 import {
   useChangeLocale,
   useCurrentLocale,
@@ -16,8 +16,9 @@ import {
 } from "@/locales/client";
 import { IconMenu } from "@/components/common/IconMenu";
 import { mediaMax } from "@/styles/media";
-import {ScrollIndicator} from "@/components/common/ScrollIndicator";
-import {useAppStore} from "@/store/useAppStore";
+import { ScrollIndicator } from "@/components/common/ScrollIndicator";
+import { useAppStore } from "@/store/useAppStore";
+import { useRouter } from "next/navigation";
 
 interface Props {}
 
@@ -30,28 +31,44 @@ export function Header({}: Props) {
   const [scroll, setScroll] = useState(false);
   const [scrollPercent, setScrollPercent] = React.useState(0);
   const headerWrapRef = useRef() as React.MutableRefObject<HTMLDivElement>;
-  const visualHeight = useAppStore(state => state.visualHeight);
+  const visualHeight = useAppStore((state) => state.visualHeight);
+  const router = useRouter();
 
   const items = [
     {
       key: "axisj",
       label: t("axisj"),
+      onClick: () => {
+        router.push(`/${cl}#AXISJ`);
+      },
     },
     {
       key: "service",
       label: t("service"),
+      onClick: () => {
+        router.push(`/${cl}#SERVICE`);
+      },
     },
     {
       key: "solution",
       label: t("solution"),
-    },
-    {
-      key: "design",
-      label: t("design"),
+      onClick: () => {
+        router.push(`/${cl}#AXFRAME`);
+      },
     },
     {
       key: "contact",
       label: t("contact"),
+      onClick: () => {
+        router.push(`/${cl}#CONTACT`);
+      },
+    },
+    {
+      key: "blog",
+      label: t("blog"),
+      onClick: () => {
+        router.push("/blog");
+      },
     },
   ];
 
@@ -59,7 +76,11 @@ export function Header({}: Props) {
     const headerWarpHeight = headerWrapRef.current?.clientHeight;
     const heightGap = visualHeight - headerWarpHeight;
     setScroll(window.scrollY > heightGap);
-    setScrollPercent(window.scrollY / (window.document.body.clientHeight - window.innerHeight) * 100);
+    setScrollPercent(
+      (window.scrollY /
+        (window.document.body.clientHeight - window.innerHeight)) *
+        100
+    );
   }, [visualHeight]);
 
   useEffect(() => {
@@ -77,7 +98,7 @@ export function Header({}: Props) {
       <Container>
         <div className={"gnbWrapper"}>
           <div className={"left"}>
-            <Link href={"#HOME"}>
+            <Link href={`/${cl}#HOME`}>
               <LogoAXSymbol className={"logo"} />
             </Link>
           </div>
@@ -277,7 +298,6 @@ const Layer = styled.div`
     .ant-menu-title-content {
     }
   }
-  
 `;
 
 const MobileMenuWrap = styled.div`

@@ -1,14 +1,14 @@
 import * as React from "react";
-import styled from "@emotion/styled";
+import Icons, { IconsProps } from "@/components/common/@Icon";
 
 interface Props {
   size?: string;
   onClick?: () => void;
 }
 
-export function IconInstagram({ size, onClick }: Props) {
+export function IconInstagram({ size, onClick }: IconsProps) {
   return (
-    <Container size={size} onClick={onClick}>
+    <Icons size={size} onClick={onClick}>
       <svg viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fillRule="evenodd"
@@ -27,14 +27,6 @@ export function IconInstagram({ size, onClick }: Props) {
           fill="white"
         />
       </svg>
-    </Container>
+    </Icons>
   );
 }
-
-const Container = styled.div<Props>`
-  cursor: pointer;
-  svg {
-    width: ${(props) => (props.size ? `${props.size}` : "100%")};
-    height: ${(props) => (props.size ? `${props.size}` : "100%")};
-  }
-`;

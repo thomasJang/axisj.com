@@ -70,7 +70,7 @@ export function IconDesign2({ size, onClick }: Props) {
 const Container = styled.div<Props>`
   cursor: pointer;
   svg {
-    width: ${(props) => (props.size ? `${props.size}` : "100%")};
-    height: ${(props) => (props.size ? `${props.size}` : "100%")};
+    width: ${(props) => (props.size ? `${props.size}` : "1em")};
+    height: ${(props) => (props.size ? `${props.size}` : "1em")};
   }
 `;

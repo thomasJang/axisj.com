@@ -4,11 +4,12 @@ import styled from "@emotion/styled";
 interface Props {
   size?: string;
   className?: string;
+  style?: React.CSSProperties;
 }
 
-export function LogoAXSymbol({ size, className }: Props) {
+export function LogoAXSymbol({ size, className, style }: Props) {
   return (
-    <Container size={size} className={className}>
+    <Container size={size} className={className} style={style}>
       <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M0.588363 7.17647C-1.17634 3.88235 1.1766 0 4.82366 0C6.58836 0 8.23542 0.941176 9.05895 2.47059L25.5295 32.8235C26.3531 34.2353 26.3531 36.1176 25.5295 37.5294C24.706 39.0588 23.059 40 21.2942 40C19.5295 40 17.8825 39.0588 17.059 37.5294L0.588363 7.17647Z"

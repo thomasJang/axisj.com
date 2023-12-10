@@ -8,7 +8,8 @@ export default {
   "menu.service": "Service",
   "menu.solution": "AXFrame",
   "menu.design": "Design",
-  "menu.contact": "ContactUs",
+  "menu.contact": "Contact Us",
+  "menu.blog": "Blog",
   "menu.group.lang": "Select Language",
 
   "hero-title-1": "Pioneering a dot",
@@ -34,6 +35,7 @@ export default {
   "history-text-3": "AXBoot launch",
   "history-text-4": "End of open source update",
   "history-text-5": "Established AXISJ corporation",
+  "history-text-6": "AXFrame Beta Launch",
 
   "title-ci": "CI",
   "ci-desc":
@@ -61,4 +63,25 @@ export default {
   "design-4-title": "Balance",
   "design-4-desc":
     "The harmony of elements of proportion, structure, styling and technology. We pursue aesthetically natural designs. Dichotomous thinking—black and white, yin and yang, good and evil—can quickly define and act on phenomena. But leaning to one side or the other will upset the balance. <br /><br />The harmony of the world lies in flexibility. In the dictionary meaning, soft and weak words also mean that your thoughts are soft. To expand the scope of thinking, step back and look at it from a distance and balance it. You need to distinguish what to include and what to leave out so as not to generate unnecessary attention. This will deliver a better experience without compromising or giving up the value to be delivered to the user.",
+
+  "title-service": "Service",
+  "service-1-title": "B2B Solution Development",
+  "service-1-desc": `Our B2B solution is an innovative, technology-driven business optimization solution that tailors development to meet the unique requirements of our customers. It offers excellent security and stability, flexible scalability, efficient integration with various systems, user-centric advanced UI/UX design, data-driven intelligent decision support through analysis and intelligence, along with continuous upgrades and effective technical support to enhance our clients' business performance and foster sustained growth.`,
+  "service-2-title": "IT Service",
+  "service-2-desc": `We provide innovative and customized solutions by completely handling our clients' IT tasks, sensitively responding to industry trends, and utilizing the latest technologies to meet their demands. 
+Demonstrating excellent expertise in various IT service areas, including website and app development, we maximize clients' business outcomes. 
+Additionally, our IT services, built on a foundation of stability and reliability, have gained recognition as trustworthy partners. Adhering to the latest technologies and industry standards, 
+we securely process data and continuously build trust through outstanding technical support and effective communication with our clients.`,
+  "service-3-title": "Consulting",
+  "service-3-desc": `Our company takes pride in its team of accomplished professionals, each boasting over 20 years of industry experience. Leveraging this wealth of expertise, we provide tailored education programs to meet our clients' unique needs. Specifically, AXFrame education aims to enhance our clients' business efficiency and boost their understanding and confidence in their tasks. We strive to elevate developer satisfaction by offering customized training programs tailored to our clients' situations, ultimately enhancing corporate productivity and achieving higher levels of software development excellence.`,
+
+  "axframe.tit": "AXFrame",
+  "axframe.desc": ``,
+  "axframe.use-case": "AXFrame UseCases",
+
+  "contact.tit": "Contact Us",
+  "contact.address": "Address",
+  "contact.zipcode": "Zipcode",
+  "contact.tel": "Tel.",
+  "contact.email": "E-Mail",
 } as const;

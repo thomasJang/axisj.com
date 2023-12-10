@@ -1,25 +1,6 @@
 import styled from "@emotion/styled";
 import { maxwidth, media } from "@/styles/media";
 
-export const LayoutContainer = styled.div`
-  .anchorPoint {
-    scroll-margin-top: 3rem; //gnbMobileWrapper for Mobile
-  }
-  .anchorPoint.home {
-    scroll-margin-top: 1000rem; //When you click top logo...
-  }
-  ${media.md} {
-    .anchorPoint {
-      scroll-margin-top: 5.5rem; //gnbWrapper for Desktop
-    }
-  }
-
-  &.AXRoot {
-    main {
-    }
-  }
-`;
-
 export const PageContainer = styled.div`
   max-width: 100%;
   margin: 0 auto;

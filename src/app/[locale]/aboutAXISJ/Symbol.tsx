@@ -4,6 +4,8 @@ import { PageContainer } from "@/styles/Layouts";
 import { media } from "@/styles/media";
 import { LogoAXSymbol } from "@/components/common/LogoAXSymbol";
 import { useI18n } from "@/locales/client";
+import { SMixinFlexRow } from "@/styles/emotion";
+import { Col, Row } from "antd";
 
 interface Props {}
 
@@ -13,68 +15,73 @@ export function Symbol({}: Props) {
   return (
     <Layer>
       <Container>
-        <div className={"ciTitleBox"}>
-          <div className={"left"}>
-            <h2>{t("title-ci")}</h2>
+        <h3>{t("title-ci")}</h3>
+        <Row
+          className={"ciTitleBox"}
+          gutter={32}
+          justify="start"
+          align={"middle"}
+        >
+          <Col>
+            <LogoAXSymbol size={"5rem"} style={{ margin: "1rem 0" }} />
+          </Col>
+          <Col xs={24} sm={18} md={20} lg={16} xl={12}>
             <p>{t("ci-desc")}</p>
-          </div>
-          <div className={"right"}>
-            <LogoAXSymbol size={"5rem"} />
-          </div>
-        </div>
+          </Col>
+        </Row>
 
-        <div className={"colorBox primary"}>
-          <h3>{t("title-color-primary")}</h3>
-          <ul>
-            <li>
+        <div className={"colorBox"}>
+          <h4>{t("title-color-primary")}</h4>
+          <Row gutter={32} justify="start" align={"middle"}>
+            <Col>
               <div className={"palletBox"}>
                 <span className={"colorPallet ax_supernova_red"}></span>
                 <span className={"colorName"}>{t("color-primary-1")}</span>
               </div>
-            </li>
-            <li>
+            </Col>
+            <Col>
               <div className={"palletBox"}>
                 <span className={"colorPallet ax_space_blue"}></span>
                 <span className={"colorName"}>{t("color-primary-2")}</span>
               </div>
-            </li>
-            <li>
+            </Col>
+            <Col>
               <div className={"palletBox"}>
                 <span className={"colorPallet ax_deep_black"}></span>
                 <span className={"colorName"}>{t("color-primary-3")}</span>
               </div>
-            </li>
-          </ul>
+            </Col>
+          </Row>
         </div>
 
-        <div className={"colorBox wild"}>
-          <h3>{t("title-color-wild")}</h3>
-          <ul>
-            <li>
+        <div className={"colorBox"}>
+          <h4>{t("title-color-wild")}</h4>
+          <Row gutter={32} justify="start" align={"middle"}>
+            <Col>
               <div className={"palletBox"}>
                 <span className={"colorPallet ax_desert_yellow"}></span>
                 <span className={"colorName"}>{t("color-wild-1")}</span>
               </div>
-            </li>
-            <li>
+            </Col>
+            <Col>
               <div className={"palletBox"}>
                 <span className={"colorPallet ax_leaf_green"}></span>
                 <span className={"colorName"}>{t("color-wild-2")}</span>
               </div>
-            </li>
-            <li>
+            </Col>
+            <Col>
               <div className={"palletBox"}>
                 <span className={"colorPallet ax_sandy_brown"}></span>
                 <span className={"colorName"}>{t("color-wild-3")}</span>
               </div>
-            </li>
-            <li>
+            </Col>
+            <Col>
               <div className={"palletBox"}>
                 <span className={"colorPallet ax_skyblue"}></span>
                 <span className={"colorName"}>{t("color-wild-4")}</span>
               </div>
-            </li>
-          </ul>
+            </Col>
+          </Row>
         </div>
       </Container>
     </Layer>
@@ -83,68 +90,38 @@ export function Symbol({}: Props) {
 
 const Container = styled(PageContainer)``;
 const Layer = styled.div`
-  background: var(--line-gr);
+  border-top: 1px solid var(--border-color);
   padding: 5rem 2rem;
+
+  h3 {
+    font-size: 1.8rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  h4 {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
   .ciTitleBox {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    .left {
-      width: 100%;
-      flex-wrap: wrap;
-      flex-grow: 0;
-      flex-shrink: 0;
-      h2 {
-        font-size: 1.5rem;
-        font-weight: normal;
-      }
-      p {
-        padding: 2rem 0;
-        font-size: 1rem;
-        line-height: 1.3rem;
-        word-break: keep-all;
-        color: var(--txt-body);
-      }
-    }
-    .right {
-      width: 100%;
-      display: flex;
-      flex-grow: 1;
-      flex-shrink: 1;
-      justify-content: center;
-      align-items: center;
+    p {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      word-break: keep-all;
+      color: var(--txt-body);
     }
   }
   .colorBox {
     //dl...
-    margin-top: 3rem;
-    h3 {
-      font-size: 1.25rem;
-      font-weight: normal;
-    }
-    ul {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      align-items: center;
-      list-style: none;
-      margin: 2rem 0;
-      padding: 0;
-      li {
-        width: 100%;
-        span {
-          vertical-align: middle;
-        }
-      }
-    }
+    margin-top: 2rem;
     .colorPallet {
       flex: 0 0 auto;
       display: inline-block;
-      width: 3.75rem;
-      height: 3.75rem;
+      width: 2rem;
+      height: 2rem;
       border-radius: 100rem;
 
       &.ax_supernova_red {
@@ -175,54 +152,12 @@ const Layer = styled.div`
       word-break: keep-all;
     }
     .palletBox {
-      padding: 0.5rem;
+      padding: 0.3rem;
       display: flex;
       justify-content: flex-start;
       align-items: center;
       gap: 1rem;
       //flex-wrap:no-wrap
-    }
-  }
-
-  ${media.md} {
-    padding: 5rem 0;
-    .ciTitleBox {
-      .left {
-        width: 60%;
-      }
-      .right {
-        width: 40%;
-      }
-    }
-    .colorBox.primary {
-      ul {
-        li {
-          width: 33.33%;
-        }
-      }
-    }
-    .colorBox.wild {
-      ul {
-        li {
-          width: 50%;
-        }
-      }
-    }
-  }
-  ${media.lg} {
-    .colorBox.primary {
-      ul {
-        li {
-          width: 33.33%;
-        }
-      }
-    }
-    .colorBox.wild {
-      ul {
-        li {
-          width: 25%;
-        }
-      }
     }
   }
 `;

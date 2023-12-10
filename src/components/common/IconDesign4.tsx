@@ -1,14 +1,9 @@
 import * as React from "react";
-import styled from "@emotion/styled";
+import Icons, { IconsProps } from "@/components/common/@Icon";
 
-interface Props {
-  size?: string;
-  onClick?: () => void;
-}
-
-export function IconDesign4({ size, onClick }: Props) {
+export function IconDesign4({ size, onClick }: IconsProps) {
   return (
-    <Container size={size} onClick={onClick}>
+    <Icons size={size} onClick={onClick}>
       <svg
         width="80"
         height="80"
@@ -49,14 +44,6 @@ export function IconDesign4({ size, onClick }: Props) {
           fill="#E0D0A6"
         />
       </svg>
-    </Container>
+    </Icons>
   );
 }
-
-const Container = styled.div<Props>`
-  cursor: pointer;
-  svg {
-    width: ${(props) => (props.size ? `${props.size}` : "100%")};
-    height: ${(props) => (props.size ? `${props.size}` : "100%")};
-  }
-`;

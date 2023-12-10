@@ -9,13 +9,7 @@ interface Props {
 export function IconDesign3({ size, onClick }: Props) {
   return (
     <Container size={size} onClick={onClick}>
-      <svg
-        width="80"
-        height="80"
-        viewBox="0 0 80 80"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M52.5 57.5C52.5 57.5 65.8 54.0001 67.1 53.9001C68.3 53.7001 73.2 52.2 74.1 56C75 59.8 71.8 61.3 71.8 61.3C71.8 61.3 57.5 68.6 50.1 72.7C42.7 76.8 37.7 74.2 37.7 74.2C37.7 74.2 28.6 69.8 24.4 67.1C20.2 64.4 16.4 66.0001 11.7 67.4001C7 68.8001 6.5 65 6.5 65V50.6C6.5 50.6 6.5 48.2001 10.1 47.7001C13.7 47.2001 22.2 46.3 22.2 46.3C22.2 46.3 28.4 46.5 31.3 48.3C34.2 50.1 39.9 52.2001 39.9 52.2001C39.9 52.2001 43.5 53.3 46.1 53.3C48.3 53.4 51.6 53.7 52.5 57.5Z"
           stroke="#E0D0A6"
@@ -66,7 +60,7 @@ export function IconDesign3({ size, onClick }: Props) {
 const Container = styled.div<Props>`
   cursor: pointer;
   svg {
-    width: ${(props) => (props.size ? `${props.size}` : "100%")};
-    height: ${(props) => (props.size ? `${props.size}` : "100%")};
+    width: ${(props) => (props.size ? `${props.size}` : "1em")};
+    height: ${(props) => (props.size ? `${props.size}` : "1em")};
   }
 `;
