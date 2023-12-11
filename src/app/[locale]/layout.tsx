@@ -3,6 +3,7 @@ import "../../styles/globals.css";
 import { Header } from "@/app/[locale]/Header";
 import { Providers } from "@/app/[locale]/providers";
 import { Footer } from "@/app/[locale]/Footer";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "axisj.com",
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: Props) {
           {children}
           <Footer />
         </Providers>
+        <Analytics />
       </body>
     </html>
   );
