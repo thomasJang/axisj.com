@@ -63,7 +63,7 @@ export default Posts;
 const PostWrap = styled.div`
   display: grid;
   gap: 32px;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
 
   ${mediaMax.md} {
     gap: 16px;
@@ -75,14 +75,10 @@ const PostCard = styled.div`
   border: 1px solid var(--border-color);
   padding: 24px;
   border-radius: 10px;
-  max-width: 450px;
 
   ${SMixinFlexColumn("stretch", "stretch")};
   gap: 1rem;
 
-  ${mediaMax.md} {
-    margin: 0 auto;
-  }
   img {
     width: 100%;
     border-radius: 10px;
@@ -90,10 +86,6 @@ const PostCard = styled.div`
   .meta {
     ${SMixinFlexRow("stretch", "stretch")};
     gap: 1rem;
-
-    ${mediaMax.md} {
-      padding: 1rem;
-    }
 
     .titles {
       ${SMixinFlexColumn("flex-start", "flex-start")};

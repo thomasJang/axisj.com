@@ -10,6 +10,7 @@ import { useI18n } from "@/locales/client";
 import { IconInstagram } from "@/components/common/IconInstagram";
 import { IconGithub } from "@/components/common/IconGithub";
 import { DownOutlined } from "@ant-design/icons";
+import { SMixinFlexRow } from "@/styles/emotion";
 
 interface Props {}
 
@@ -33,7 +34,7 @@ export function Footer({}: Props) {
             </span>
           </Col>
           <Col
-            span={14}
+            xs={24}
             sm={24}
             md={12}
             lg={12}
@@ -86,8 +87,8 @@ export function Footer({}: Props) {
         </Row>
         <Divider className={"divider"} />
         <Row>
-          <Col>
-            <span className={"faddr"}>{t("footer-addr")}</span>
+          <Col span={24} className={"faddr"}>
+            <span>{t("footer-addr")}</span>
           </Col>
         </Row>
       </Container>
@@ -104,6 +105,7 @@ const Div = styled.div`
   z-index: 5;
   overflow-x: hidden;
   border-top: 1px solid var(--border-color);
+  background: var(--background);
 
   .colLeft {
     align-items: center;
@@ -124,6 +126,7 @@ const Div = styled.div`
     gap: 1rem;
     align-items: center;
     justify-content: center;
+    font-size: 0.75rem;
 
     svg {
       display: block;
@@ -140,12 +143,22 @@ const Div = styled.div`
     border-top: 0.063rem solid var(--border-color);
   }
   ${mediaMax.md} {
-    padding: 6rem 2rem;
+    padding: 1rem;
+    .divider {
+      margin: 1rem auto;
+      width: 50%;
+      min-width: auto;
+    }
     .colLeft {
       padding: 1rem 0;
+      ${SMixinFlexRow("center", "center")};
     }
     .colRight {
-      justify-content: flex-start;
+      ${SMixinFlexRow("center", "center")};
+    }
+    .faddr {
+      text-align: center;
+      line-height: 1.5;
     }
   }
 `;

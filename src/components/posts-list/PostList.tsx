@@ -6,6 +6,7 @@ import { Post } from "@/lib/types";
 import Posts from "@/components/posts-list/Posts";
 import { PageContainer } from "@/styles/Layouts";
 import { PostTitle } from "@/components/posts-list/PostTitle";
+import { mediaMax } from "@/styles/media";
 
 interface Props {
   posts: Post[];
@@ -29,4 +30,8 @@ const Container = styled(PageContainer)``;
 const Layer = styled.div`
   border-top: 1px solid var(--border-color);
   padding: 3rem 0;
+
+  ${mediaMax.md} {
+    padding: 1rem;
+  }
 `;
