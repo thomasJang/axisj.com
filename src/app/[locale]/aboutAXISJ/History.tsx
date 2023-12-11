@@ -84,7 +84,7 @@ export function History({}: Props) {
 const Container = styled(PageContainer)``;
 
 const Layer = styled.div`
-  padding: 5rem 0;
+  padding: 3rem 0 5rem 0;
   background: var(--line-gr);
 
   h2 {
@@ -98,6 +98,9 @@ const Layer = styled.div`
     line-height: 1.75rem;
     font-weight: 700;
     text-align: center;
+    ${mediaMax.md} {
+      text-align: left;
+    }
   }
 
   p {
