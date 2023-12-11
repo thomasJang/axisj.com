@@ -30,13 +30,15 @@ export default {
   "footer-select-1": "AXISJ",
   "footer-select-2": "AXFrame",
 
-  "history-title-1": "History",
-  "history-text-1": "Launched ModsAX Framework",
-  "history-text-2": "Open source AXISJ launch",
-  "history-text-3": "AXBoot launch",
-  "history-text-4": "End of open source update",
-  "history-text-5": "Established AXISJ corporation",
-  "history-text-6": "AXFrame Beta Launch",
+  "history.title": "History",
+  "history.1": "Launched ModsAX Framework",
+  "history.2": "Open source AXISJ launch",
+  "history.21": "Super Developer K3 Wins",
+  "history.3": "AXBoot launch",
+  "history.31": "Gold Award at the 10th Open Software Developer Conference",
+  "history.4": "End of open source update",
+  "history.5": "Established AXISJ corporation",
+  "history.6": "AXFrame Beta Launch",
 
   "title-ci": "CI",
   "ci-desc":
@@ -77,12 +79,36 @@ we securely process data and continuously build trust through outstanding techni
   "service-3-desc": `Our company takes pride in its team of accomplished professionals, each boasting over 20 years of industry experience. Leveraging this wealth of expertise, we provide tailored education programs to meet our clients' unique needs. Specifically, AXFrame education aims to enhance our clients' business efficiency and boost their understanding and confidence in their tasks. We strive to elevate developer satisfaction by offering customized training programs tailored to our clients' situations, ultimately enhancing corporate productivity and achieving higher levels of software development excellence.`,
 
   "axframe.tit": "AXFrame",
-  "axframe.desc": ``,
+  "axframe.desc": `AXFrame is a React-based web app development framework that enables the rapid and easy construction of high-quality web applications. This framework leverages the latest technologies in frontend development, such as React, TypeScript, Zustand, and AntDesign, providing developers with an enjoyable working experience. AXFrame supports developers in quickly building polished applications by offering essential core modules for web application development as presets.
+
+In particular, AXFrame provides UI-related features that maximize user convenience, including multilingual extension and theme extension. Among these features, the tab navigation functionality maintains the user's input state for each tab, offering a convenient user experience previously unexplored, seamlessly integrated with the browser's history. If you are preparing for a new project, we recommend exploring AXFrame for your development needs`,
   "axframe.use-case": "AXFrame UseCases",
+  "axframe.use-case.planeat.title": "PlanEAT Choice",
+  "axframe.use-case.planeat.customer": "SAMSUNG, IMTSoft",
+  "axframe.use-case.planeat.desc": `PlanEAT Choice is a Samsung Group meal management solution designed for Samsung Electronics employees. We began preparing for the project in the second half of 2022 and successfully concluded it in December 2023. The project consists of ASP (Catering Company Administrator), PORTAL (Employee Portal), and a mobile app. Due to the need for separate instances for each Samsung Group company, the project was considered a blockbuster in terms of scale and installation complexity.
+
+This extensive project provided an excellent opportunity to apply various features of AXFrame, demonstrating its effectiveness in a large-scale setting. The solution underwent validation in closed network environments used by diverse users, reaffirming the robustness of AXFrame`,
+  "axframe.use-case.bh.title": "Residential Specialist Communication System",
+  "axframe.use-case.bh.customer": "SH",
+  "axframe.use-case.bh.desc": `The Seoul Housing and Urban Corporation has commissioned the development of a specialized communication system for housing improvement targeting vulnerable populations, and the project has officially commenced. The main functionalities include uploading the list of individuals in vulnerable housing situations into the system and enabling the modification of their status. Additionally, the system allows counselors to upload reports on the housing vulnerability status of individuals.
+
+The system is designed to enable separate management of customer lists by designated personnel in each region of Seoul. Furthermore, an overarching administrator role has been implemented to facilitate monitoring of progress in each region. Research and development efforts have been dedicated to studying and implementing program controls based on user roles and permissions.`,
+  "axframe.use-case.tm.title": "TeleMarketing Solution",
+  "axframe.use-case.tm.customer": "WEFOR Inc., AXISJ Inc.",
+  "axframe.use-case.tm.desc": `We have collaborated with the specialized software sales company, WEFOR Co., Ltd., to develop a telemarketing solution. This solution offers various features tailored for telemarketing activities, with a particular focus on optimizing the user interface/user experience (UI/UX) to facilitate easy and fast registration of telemarketing interactions between the customer and the agent.
+
+Key functionalities include segment management, allowing telemarketing to be conducted on a segmented basis. An Excel converter is provided to upload customer lists to segments seamlessly. The solution also features telemarketing management capabilities, enabling agents to record interactions with each customer for reference and analysis.`,
+  "axframe.use-case.gms.title": "Weightlifting Competition Management System",
+  "axframe.use-case.gms.customer": "AXISJ Inc., TAEIN Inc.",
+  "axframe.use-case.gms.desc": `AXISJ previously developed and operated a weightlifting competition management system for the disabled. Based on the previously developed weightlifting competition management system for the disabled, a weightlifting competition management system for the general public was developed.
+  
+The new system completely improved the previously inconvenient parts by introducing AXFrame. We further developed an electronic board, timer, and referee screen using WebSocket communication.`,
 
   "contact.tit": "Contact Us",
   "contact.address": "Address",
   "contact.zipcode": "Zipcode",
   "contact.tel": "Tel.",
   "contact.email": "E-Mail",
+  "contact.naver-map": "Naver Map",
+  "contact.daum-map": "Daum Map",
 } as const;

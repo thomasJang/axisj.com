@@ -29,13 +29,15 @@ export default {
   "footer-select-1": "액시스제이",
   "footer-select-2": "액스프레임",
 
-  "history-title-1": "History",
-  "history-text-1": "액스모즈(ModsAX)",
-  "history-text-2": "오픈소스 액시스제이 런칭",
-  "history-text-3": "액스부트 런칭",
-  "history-text-4": "오픈소스 업데이트 종료",
-  "history-text-5": "액시스제이 법인설립",
-  "history-text-6": "액스프레임 베타 런칭",
+  "history.title": "History",
+  "history.1": "액스모즈(ModsAX)",
+  "history.2": "오픈소스 액시스제이 런칭",
+  "history.21": "슈퍼 개발자K3 우승",
+  "history.3": "AXBoot launch",
+  "history.31": "제10회 공개소프트웨어 개발자대회 금상",
+  "history.4": "AXISJ 오픈소스 업데이트 종료",
+  "history.5": "액시스제이 법인설립",
+  "history.6": "액스프레임 베타 런칭",
 
   "title-ci": "로고",
   "ci-desc":
@@ -77,13 +79,38 @@ export default {
 
   "axframe.tit": "액스프레임",
   "axframe.desc": `액스프레임(AxFrame)은 리액트(React) 기반의 웹앱 개발 프레임워크로, 빠르고 쉽게 고품질의 웹 애플리케이션을 구축할 수 있게 해줍니다. 이 프레임워크는 프론트엔드 개발의 최신 기술들(예: React, TypeScript, Zustand, AntDesign)을 활용하여 개발자들에게 즐거운 작업 경험을 제공합니다. 액스프레임은 웹 애플리케이션 개발에 필수적인 핵심 모듈들을 프리셋으로 제공함으로써 개발자들이 단기간에 완성도 높은 애플리케이션을 개발할 수 있도록 지원합니다.
-
+  
 특히, 액스프레임은 다국어 확장, 테마 확장 등 사용자의 편의성을 극대화할 수 있는 UI 관련 기능들을 제공합니다. 그 중에서도 탭 네비게이션 기능은 사용자의 입력 상태를 각 탭에 유지시켜주고, 브라우저의 히스토리와 연계되어 이전에 경험하지 못했던 편리한 사용자 경험을 제공합니다. 새로운 프로젝트를 준비 중이시라면 액스프레임을 활용해 보는 것을 추천합니다.`,
-  "axframe.use-case": "AXFrame UseCases",
+  "axframe.use-case": "개발사례",
+  "axframe.use-case.planeat.title": "PlanEAT Choice",
+  "axframe.use-case.planeat.customer": "SAMSUNG, IMTSoft",
+  "axframe.use-case.planeat.desc": `PlanEAT Choice는 삼성전자 임직원들을 위한 삼성 그룹사 급식 관리 솔루션입니다. 2022년 하반기부터 프로젝트를 준비하기 시작하여 2023년 12월에 되어서 프로젝트를 마무리 할 수 있었습니다. 
+본 프로젝트는 ASP(급식업체 관리자) PORTAL(임직원 포털) 모바일APP로 구성되며 삼성그룹사 마다 별도의 인스턴스를 구성해야 했기에 프로젝트 규모나 설치면에서 블록버스터 급이라 말할 수 있었습니다.
+AXFrame의 다양한 기능들을 대규모 프로젝트에 적용해볼 수 있었고 다양한 사용자들이 사용하는 폐쇄망환경에서 AXFrame이 검증될 수 있었던 좋은 기회 였습니다.`,
+  "axframe.use-case.bh.title": "주거상향 전문가 소통 시스템",
+  "axframe.use-case.bh.customer": "서울주택도시공사",
+  "axframe.use-case.bh.desc": `서울주택 도시공사에서는 주거취약계층을 위한 주거상향 전문가 소통 시스템을 구축하도록 의뢰하였고, 이 프로젝트를 시작하게 되었습니다. 주요 기능은 주거 취약계층 대상자 명단을 시스템에 업로드하고 대상자 명단의 상태를 변경하는 기능, 그리고 대상자의 주거취약 상태에 대한 상담사의 보고서를 시스템에 업로드하는 기능입니다. 
+
+고객 명단은 서울 각 권역별로 별도의 담당자가 효과적으로 관리할 수 있도록 설계되었으며, 전체 관리자는 권역별 진행상황을 파악할 수 있도록 구현되었습니다. 뿐만 아니라, 사용자의 역할에 따라 권한 및 프로그램 제어에 대한 연구와 개발이 진행되었습니다.`,
+  "axframe.use-case.tm.title": "텔레마케팅 솔루션",
+  "axframe.use-case.tm.customer": "(주)위포, AXISJ",
+  "axframe.use-case.tm.desc": `대전에 기반을 둔 소프트웨어 영업전문 회사 (주)위포와 함께 텔레마케팅 솔루션을 개발하게 되었습니다. 
+이 솔루션은 텔레마케팅을 위한 다양한 기능들을 제공하며, 특히 고객과 진행된 텔레마케팅 내용을 담당자가 쉽고 빠르게 등록 할 수 있도록 UI/UX를 최적화하였습니다. 
+
+주요기능으로는 텔레마케팅을 세그먼트 단위로 진행 할 수 있도록 하는 세그먼트 관리, 세그먼트에 고객명단을 업로드할 수 있는 엑셀 컨버터, 고객마다 TM기록을 남길 수 있는 TM관리 기능등이 있습니다.
+`,
+  "axframe.use-case.gms.title": "역도경기관리시스템",
+  "axframe.use-case.gms.customer": "AXISJ, 태인스포먼트",
+  "axframe.use-case.gms.desc": `액시스제이는 기존에 장애인 역도경기관리시스템을 개발하여 운영하고 있었습니다. 기존에 개발된 장애인역도경기관리시스템을 기반으로 일반인 역도경기관리시스템을 개발하게 되었습니다.
+  
+새로운 시스템은 기존에 불편했던 부분들을 AXFrame도입으로 완전히 개선하였고. 웹소켓을 통신을 이용한 전광판, 타이머, 심판판정 화면을 추가로 개발 하였습니다. 
+  `,
 
   "contact.tit": "오시는 길",
   "contact.address": "주소",
   "contact.zipcode": "우편번호",
   "contact.tel": "전화번호",
   "contact.email": "이메일 주소",
+  "contact.naver-map": "Naver 지도",
+  "contact.daum-map": "Daum 지도",
 } as const;

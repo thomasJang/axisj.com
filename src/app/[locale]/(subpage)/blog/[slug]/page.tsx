@@ -5,6 +5,9 @@ import printDate from "@/utils/printDate";
 import { getCurrentLocale } from "@/locales/server";
 import Navigation from "@/components/post/navigation";
 import * as React from "react";
+import { Button, Space } from "antd";
+import { ArrowLeftOutlined } from "@ant-design/icons";
+import Link from "next/link";
 
 export async function generateStaticParams() {
   const posts = await getPosts();
@@ -39,6 +42,13 @@ export default async function PostPage({
   const { previous, next, post } = await getData(params); // return <Post post={post} previous={previous} next={next} />;
   return (
     <div className={styles.article}>
+      <Link href={`/blog`} className={styles.back}>
+        <Space align={"center"}>
+          <ArrowLeftOutlined />
+          Back to Blog
+        </Space>
+      </Link>
+
       <span className={styles.date}>{printDate(post.date, currentLocale)}</span>
       <h1 className={styles.title}>{post.title}</h1>
       {post.subtitle && <h2 className={styles.subtitle}>{post.subtitle}</h2>}

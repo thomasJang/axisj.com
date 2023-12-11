@@ -27,7 +27,9 @@ const Posts = ({ posts, paginate }: Props) => {
             <div className={"meta"}>
               <div className={"titles"}>
                 <span role={"date"}>{printDate(post.date, cl)}</span>
-                <h5 role={"title"}>{post.title}</h5>
+                <Link href={`/blog/${post.slug}`} role={"read"}>
+                  <h5 role={"title"}>{post.title}</h5>
+                </Link>
               </div>
               <div role={"writer"}>
                 <Avatar>{post.writer.slice(0, 1)}</Avatar>
@@ -120,5 +122,8 @@ const PostCard = styled.div`
   [role="read"] {
     font-size: 14px;
     font-weight: bold;
+    &:hover {
+      color: var(--txt-link-hover);
+    }
   }
 `;

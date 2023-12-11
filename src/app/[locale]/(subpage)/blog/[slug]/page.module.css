@@ -1,38 +1,54 @@
 .article {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .article .date {
-    font-size: 1rem;
-    color: var(--txt-body);
+  font-size: 1rem;
+  color: var(--txt-body);
 }
 .article .title {
-    font-size: 2rem;
-    color: var(--txt-display);
-    line-height: 3.5rem;
+  font-size: 2rem;
+  color: var(--txt-display);
+  line-height: 3.5rem;
 }
 .article .subtitle {
-    font-size: 1.5rem;
-    color: var(--txt-body);
-    font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--txt-body);
+  font-weight: 500;
 }
 .article .body {
-    margin: 1rem 0;
-    font-size: 1rem;
-    color: var(--txt-body);
-    line-height: 1.5rem;
-    max-width: 1000px;
+  margin: 1rem 0;
+  font-size: 1rem;
+  color: var(--txt-body);
+  line-height: 1.5rem;
+  max-width: 1000px;
+}
+
+.article .body h1,
+.article .body h2,
+.article .body h3,
+.article .body h4,
+.article .body h5,
+.article .body h6 {
+  color: var(--txt-display);
 }
 .article .body p {
-    margin: 1rem 0;
+  margin: 1rem 0;
+}
+
+.article .back {
+  margin-bottom: 3rem;
+  color: var(--txt-body);
+  font-size: 0.8rem;
+  display: flex;
+  gap: 0.5rem;
 }
 
 .author {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 .author b {
-
 }

@@ -109,6 +109,7 @@ export function Header({}: Props) {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -212,11 +213,11 @@ const Layer = styled.div`
   z-index: 999;
   top: 0;
   left: 0;
-  -webkit-backdrop-filter: blur(0.2rem);
-  backdrop-filter: blur(0.2rem);
   transition: all 0.2s ease-out;
 
   &.scrolled {
+    -webkit-backdrop-filter: blur(0.2rem);
+    backdrop-filter: blur(0.2rem);
     background: rgba(255, 255, 255, 0.9);
     border-bottom: 1px solid var(--border-color);
     .gnbWrapper {
