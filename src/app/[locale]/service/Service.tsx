@@ -17,7 +17,7 @@ export function Service({}: Props) {
     <Layer>
       <Container>
         <h2>{t("title-service")}</h2>
-        <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32, xl: 64 }}>
+        <Row gutter={[{ xs: 8, sm: 16, md: 24, lg: 32, xl: 64 }, 24]}>
           <Col span={24} sm={24} md={12} lg={12} xl={8}>
             <div className={"titIcon ti1"}>
               <IconDesign1 />
@@ -95,7 +95,7 @@ const Layer = styled.div`
 
   p {
     margin: 1rem 0;
-    line-height: 1.4rem;
     color: var(--txt-body);
+    font-size: 0.95rem;
   }
 `;

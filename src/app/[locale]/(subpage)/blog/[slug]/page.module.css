@@ -26,7 +26,7 @@
   margin: 1rem 0;
   color: var(--txt-body);
   line-height: 1.5rem;
-  font-family: var(--font-body);
+  /*font-family: var(--font-body);*/
 }
 
 .article .body h1,
@@ -38,10 +38,12 @@
   font-family: var(--font);
   color: var(--txt-display);
   margin: 1.2em 0 1em 0;
+  font-weight: 500;
 }
 .article .body p {
   font-size: 1rem;
   margin: 1rem 0;
+  font-weight: 300;
 }
 .article .body img {
   max-width: 100%;

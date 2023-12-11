@@ -61,6 +61,7 @@ body {
   font-size: 16px;
   overflow-x: hidden;
   font-family: var(--font);
+  line-height: 150%;
 }
 
 h1 {
@@ -76,13 +77,14 @@ h4 {
   font-size: 1.125rem;
 }
 h5 {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 h6 {
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 p {
-  font-size: 0.875rem;
+  font-size: 1rem;
+  word-break: keep-all;
 }
 
 a {

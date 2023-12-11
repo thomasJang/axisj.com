@@ -89,16 +89,17 @@ const PostCard = styled.div`
 
     .titles {
       ${SMixinFlexColumn("flex-start", "flex-start")};
-      gap: 0.5rem;
       flex: 1;
     }
 
     [role="date"] {
       font-size: 0.8rem;
+      color: var(---txt-body);
     }
     [role="title"] {
       font-size: 1.2rem;
       line-height: 1.5rem;
+      font-weight: 700;
     }
     [role="writer"] {
       flex: none;
@@ -106,10 +107,9 @@ const PostCard = styled.div`
   }
 
   p {
-    font-family: var(--font-body);
     color: var(--txt-body);
     font-size: 0.9rem;
-    line-height: 1.2rem;
+    font-weight: 300;
   }
 
   [role="read"] {

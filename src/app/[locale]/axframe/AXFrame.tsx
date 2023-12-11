@@ -124,8 +124,9 @@ const Layer = styled.div`
 
   p {
     margin: 0;
-    line-height: 1.4rem;
     color: var(--white);
+    font-size: 1.05rem;
+    font-weight: 300;
   }
 `;
 
@@ -142,7 +143,6 @@ const UseCaseWrap = styled.div`
 const UseCase = styled.div`
   background: var(--white);
   border-radius: 10px;
-  max-width: 400px;
   margin: 0 auto;
   img {
     width: 100%;
@@ -162,13 +162,13 @@ const UseCase = styled.div`
       gap: 0.5rem;
       h5 {
         text-align: center;
+        font-size: 1.1rem;
       }
     }
     p {
-      font-family: var(--font-body);
       color: var(--txt-body);
-      font-size: 0.9rem;
-      line-height: 1.2rem;
+      font-size: 1rem;
+      font-weight: 300;
     }
     [role="read"] {
       font-size: 14px;
