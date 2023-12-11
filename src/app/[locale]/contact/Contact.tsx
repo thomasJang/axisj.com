@@ -51,11 +51,17 @@ export function Contact({}: Props) {
                   </dd>
                   <dt>{t("tel")}</dt>
                   <dd>
-                    <p>+82 02-2088-5725</p>
+                    <p>
+                      <a href={"tel:+82 02-2088-5725"}>+82 02-2088-5725</a>
+                    </p>
                   </dd>
                   <dt>{t("email")}</dt>
                   <dd>
-                    <p>sales@axisj.com</p>
+                    <p>
+                      <a href={"mailto:sales@axisj.com"} target="_blank">
+                        sales@axisj.com
+                      </a>
+                    </p>
                   </dd>
                 </dl>
 
@@ -121,6 +127,7 @@ const Layer = styled.div`
       font-size: 1.1rem;
       line-height: 1.4rem;
       color: var(--txt-body);
+      margin-bottom: 0.5rem;
     }
   }
 `;

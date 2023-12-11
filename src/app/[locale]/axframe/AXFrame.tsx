@@ -67,7 +67,7 @@ export function AXFrame({}: Props) {
             <img src={"/images/bh.jpg"} alt={"SH project"} />
             <div className={"meta"}>
               <div className={"titles"}>
-                <h5>주거상향 전문가 시스템</h5>
+                <h5>주거상향 전문가 소통 시스템</h5>
                 <span>서울주택도시공사</span>
               </div>
               <p>
@@ -147,6 +147,7 @@ const Layer = styled.div`
   }
 
   h3 {
+    font-size: 1.8rem;
     color: var(--white);
     text-align: center;
     margin-top: 3rem;

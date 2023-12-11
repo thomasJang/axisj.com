@@ -3,12 +3,13 @@
 import * as React from "react";
 import styled from "@emotion/styled";
 import { PageContainer } from "@/styles/Layouts";
-import { Col, Divider, Row, Select } from "antd";
+import { Col, Divider, Row, Select, Space, Dropdown } from "antd";
 import Link from "next/link";
 import { mediaMax } from "@/styles/media";
 import { useI18n } from "@/locales/client";
 import { IconInstagram } from "@/components/common/IconInstagram";
 import { IconGithub } from "@/components/common/IconGithub";
+import { DownOutlined } from "@ant-design/icons";
 
 interface Props {}
 
@@ -41,19 +42,31 @@ export function Footer({}: Props) {
             className={"colRight"}
           >
             <div className={"foptions"}>
-              <Select
-                defaultValue={t("footer-family")}
-                // onChange={handleFamilyChange}
-                options={[
-                  { label: `${t("footer-select-1")}`, value: "axisj.com" },
-                  {
-                    label: `${t("footer-select-2")}`,
-                    value: "axframe.axisj.com",
+              <Dropdown
+                menu={{
+                  items: [
+                    {
+                      label: `${t("footer-select-1")}`,
+                      key: "https://axisj.com",
+                    },
+                    {
+                      label: `${t("footer-select-2")}`,
+                      key: "https://axframe.axisj.com",
+                    },
+                  ],
+                  onClick: (info) => {
+                    window.open(info.key, "_blank");
                   },
-                ]}
-                className={"fopt1"}
-                bordered={false}
-              />
+                }}
+              >
+                <a>
+                  <Space>
+                    {t("footer-family")}
+                    <DownOutlined />
+                  </Space>
+                </a>
+              </Dropdown>
+
               <Link
                 href={"https://www.instagram.com/axisj_official/"}
                 target={"_blank"}
@@ -108,7 +121,7 @@ const Div = styled.div`
   }
   .foptions {
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
     align-items: center;
     justify-content: center;
 
@@ -117,21 +130,6 @@ const Div = styled.div`
     }
     svg [fill] {
       fill: var(--txt-body);
-    }
-    .fopt1 {
-      //antd selector...
-      .ant-select-selector {
-        color: var(--txt-body);
-        background: transparent;
-        border: 0.063rem solid var(--border-color);
-      }
-      .ant-select-arrow {
-        color: var(--txt-body);
-      }
-    }
-    .fopt2 {
-    }
-    .fopt3 {
     }
   }
   .faddr {
