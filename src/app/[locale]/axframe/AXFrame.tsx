@@ -6,6 +6,7 @@ import { Col, Row } from "antd";
 import { dangerouslySetInnerHTML } from "@/utils/string/dangerouslySetInnerHTML";
 import { SMixinFlexColumn } from "@/styles/emotion";
 import { mediaMax } from "@/styles/media";
+import Link from "next/link";
 
 interface Props {}
 
@@ -69,6 +70,10 @@ export function AXFrame({}: Props) {
                 <span>{t("use-case.tm.customer")}</span>
               </div>
               <p {...dangerouslySetInnerHTML(t("use-case.tm.desc"))} />
+
+              <Link href={`/blog/tm-solution`} role={"read"}>
+                Read More {`>>`}
+              </Link>
             </div>
           </UseCase>
           <UseCase>
@@ -160,9 +165,17 @@ const UseCase = styled.div`
       }
     }
     p {
+      font-family: var(--font-body);
       color: var(--txt-body);
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       line-height: 1.2rem;
+    }
+    [role="read"] {
+      font-size: 14px;
+      font-weight: bold;
+      &:hover {
+        color: var(--txt-link-hover);
+      }
     }
   }
 `;

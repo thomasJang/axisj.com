@@ -5,6 +5,7 @@
   --max-width: 1100px;
   --border-radius: 12px;
   --font: "GmarketSans", "NotoSansKR", "sans-serif";
+  --font-body: "NotoSansKR", "sans-serif";
 
   --foreground: #606060;
   --background: #fff;
@@ -31,6 +32,10 @@
   --white: #fff;
 
   --line-gr: linear-gradient(180deg, #fff 0%, #f5f5f5 100%);
+
+  --transition: 0.1s ease-in-out;
+  --transition-slow: 0.3s ease-in-out;
+
 }
 
 /*@media (prefers-color-scheme: dark) {*/
@@ -59,7 +64,7 @@ body {
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-size: 1.8rem;
 }
 h2 {
   font-size: 1.5rem;

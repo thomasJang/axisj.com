@@ -40,24 +40,26 @@ export default async function PostPage({
 }) {
   const { previous, next, post } = await getData(params); // return <Post post={post} previous={previous} next={next} />;
   return (
-    <div className={styles.article}>
-      <Link href={`/blog`} className={styles.back}>
-        <Space align={"center"}>
-          <ArrowLeftOutlined />
-          Back to Blog
-        </Space>
-      </Link>
+    <>
+      <div className={styles.article}>
+        <Link href={`/blog`} className={styles.back}>
+          <Space align={"center"}>
+            <ArrowLeftOutlined />
+            Back to Blog
+          </Space>
+        </Link>
 
-      <span className={styles.date}>{printDate(post.date)}</span>
-      <h1 className={styles.title}>{post.title}</h1>
-      {post.subtitle && <h2 className={styles.subtitle}>{post.subtitle}</h2>}
-      <div className={styles.author}>
-        Posted by <b>{post.writer}</b>
-      </div>
-      <div className={styles.body}>
-        <PostBody>{post.body}</PostBody>
+        <span className={styles.date}>{printDate(post.date)}</span>
+        <h1 className={styles.title}>{post.title}</h1>
+        {post.subtitle && <h2 className={styles.subtitle}>{post.subtitle}</h2>}
+        <div className={styles.author}>
+          Posted by <b>{post.writer}</b>
+        </div>
+        <div className={styles.body}>
+          <PostBody>{post.body}</PostBody>
+        </div>
       </div>
       <Navigation previous={previous} next={next} />
-    </div>
+    </>
   );
 }

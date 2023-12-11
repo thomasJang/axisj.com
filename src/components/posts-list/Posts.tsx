@@ -97,7 +97,7 @@ const PostCard = styled.div`
       font-size: 0.8rem;
     }
     [role="title"] {
-      font-size: 16px;
+      font-size: 1.2rem;
       line-height: 1.5rem;
     }
     [role="writer"] {
@@ -106,8 +106,9 @@ const PostCard = styled.div`
   }
 
   p {
+    font-family: var(--font-body);
     color: var(--txt-body);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     line-height: 1.2rem;
   }
 

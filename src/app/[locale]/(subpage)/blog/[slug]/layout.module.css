@@ -1,6 +1,10 @@
 .layer {
     border-top: 1px solid var(--border-color);
     padding: 3rem 0;
+
+  @media (min-width: 320px) {
+    padding: 1rem 0;
+  }
 }
 
 .pageContainer {
@@ -12,6 +16,7 @@
   @media (min-width: 320px) {
     max-width: 100%;
     width: 100%;
+    padding: 1rem;
   }
   /*sm*/
   @media (min-width: 480px) {
@@ -28,10 +33,10 @@
   }
   /*xl*/
   @media (min-width: 1280px) {
-    max-width: 1180px;
+    max-width: 1000px;
   }
   /*2xl*/
   @media (min-width: 1440px) {
-    max-width: 1300px;
+    max-width: 1000px;
   }
 }
