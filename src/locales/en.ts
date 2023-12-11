@@ -11,6 +11,7 @@ export default {
   "menu.contact": "Contact Us",
   "menu.blog": "Blog",
   "menu.group.lang": "Select Language",
+  "menu.blog.title": "AXISJ Blog",
 
   "hero-title-1": "Pioneering a dot",
   "hero-title-p-1": "It all starts with a small dream...",

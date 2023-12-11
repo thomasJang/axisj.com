@@ -11,6 +11,7 @@ export default {
   "menu.contact": "연락처",
   "menu.blog": "블로그",
   "menu.group.lang": "언어선택",
+  "menu.blog.title": "액시스제이 블로그",
 
   "hero-title-1": "Pioneering a dot",
   "hero-title-p-1": "시작은 작은 꿈에서 시작하고...",

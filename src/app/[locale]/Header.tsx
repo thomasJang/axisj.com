@@ -18,8 +18,8 @@ import { IconMenu } from "@/components/common/IconMenu";
 import { mediaMax } from "@/styles/media";
 import { ScrollIndicator } from "@/components/common/ScrollIndicator";
 import { useAppStore } from "@/store/useAppStore";
-import { useRouter } from "next/navigation";
-import {ArrowRightOutlined} from "@ant-design/icons";
+import { usePathname, useRouter } from "next/navigation";
+import { ArrowRightOutlined } from "@ant-design/icons";
 
 interface Props {}
 
@@ -34,6 +34,7 @@ export function Header({}: Props) {
   const headerWrapRef = useRef() as React.MutableRefObject<HTMLDivElement>;
   const visualHeight = useAppStore((state) => state.visualHeight);
   const router = useRouter();
+  const pathname = usePathname();
 
   const items = [
     {
@@ -69,39 +70,42 @@ export function Header({}: Props) {
     );
   }, [visualHeight]);
 
-  const onClickMenu = useCallback((info: any) => {
-    switch (info.key) {
-      case "axisj":{
-        router.push(`/${cl}#AXISJ`);
-        break;
+  const onClickMenu = useCallback(
+    (info: any) => {
+      switch (info.key) {
+        case "axisj": {
+          router.push(`/${cl}#AXISJ`);
+          break;
+        }
+        case "service": {
+          router.push(`/${cl}#SERVICE`);
+          break;
+        }
+        case "solution": {
+          router.push(`/${cl}#AXFRAME`);
+          break;
+        }
+        case "contact": {
+          router.push(`/${cl}#CONTACT`);
+          break;
+        }
+        case "blog": {
+          router.push("/blog");
+          break;
+        }
+        case "ko": {
+          changeLocale("ko");
+          break;
+        }
+        case "en": {
+          changeLocale("en");
+          break;
+        }
       }
-      case "service":{
-        router.push(`/${cl}#SERVICE`);
-        break;
-      }
-      case "solution":{
-        router.push(`/${cl}#AXFRAME`);
-        break;
-      }
-      case "contact":{
-        router.push(`/${cl}#CONTACT`);
-        break;
-      }
-      case "blog":{
-        router.push("/blog");
-        break;
-      }
-      case "ko":{
-        changeLocale("ko");
-        break;
-      }
-      case "en":{
-        changeLocale("en");
-        break;
-      }
-    }
-    setIsOpen(false);
-  }, [changeLocale, cl, router]);
+      setIsOpen(false);
+    },
+    [changeLocale, cl, router]
+  );
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -112,77 +116,96 @@ export function Header({}: Props) {
   }, [handleScroll]);
 
   return (
-    <Layer className={scroll ? "scrolled" : ""} ref={headerWrapRef}>
-      <ScrollIndicator percent={scrollPercent} />
-
-      <Container>
-        <div className={"gnbWrapper"}>
-          <div className={"left"}>
-            <Link href={`/${cl}#HOME`}>
-              <LogoAXSymbol className={"logo"} />
-            </Link>
-          </div>
-          <div className={"center"}>
-            <Menu mode="horizontal" selectedKeys={[]} items={items} onClick={onClickMenu} />
-          </div>
-          <div className={"right show-sm"}>
-            <LangSelector size={"1.5rem"} />
-          </div>
-          <div className={"right show-xs"}>
-            <IconMenu
-              size={"1.5rem"}
-              onClick={() => {
-                setIsOpen(true);
-              }}
-            />
-          </div>
-        </div>
-      </Container>
-
-      <Drawer
-        title="AXISJ.com"
-        placement="right"
-        onClose={() => {
-          setIsOpen(false);
-        }}
-        closable={true}
-        open={isOpen}
-        styles={{
-          body: {
-            padding: 10,
-          },
-        }}
-        closeIcon={<ArrowRightOutlined />}
+    <>
+      <Layer
+        className={
+          scroll || pathname.replace(`/${cl}`, "") !== "" ? "scrolled" : ""
+        }
+        ref={headerWrapRef}
       >
-        <MobileMenuWrap>
-          <Menu
-            mode="vertical"
-            className={"mobile-menu"}
-            items={[
-              ...items,
-              {
-                type: "group", // Must have
-                label: t("group.lang"),
-              },
-              {
-                label: `한국어`,
-                key: "ko",
-              },
-              {
-                label: `English`,
-                key: "en",
-              },
-            ]}
-            onClick={onClickMenu}
-          />
-        </MobileMenuWrap>
-      </Drawer>
-    </Layer>
+        <ScrollIndicator percent={scrollPercent} />
+
+        <Container>
+          <div className={"gnbWrapper"}>
+            <div className={"left"}>
+              <Link href={`/${cl}#HOME`}>
+                <LogoAXSymbol className={"logo"} />
+              </Link>
+            </div>
+            <div className={"center"}>
+              <Menu
+                mode="horizontal"
+                selectedKeys={[]}
+                items={items}
+                onClick={onClickMenu}
+              />
+            </div>
+            <div className={"right show-sm"}>
+              <LangSelector size={"1.5rem"} />
+            </div>
+            <div className={"right show-xs"}>
+              <IconMenu
+                size={"1.5rem"}
+                onClick={() => {
+                  setIsOpen(true);
+                }}
+              />
+            </div>
+          </div>
+        </Container>
+
+        <Drawer
+          title="AXISJ.com"
+          placement="right"
+          onClose={() => {
+            setIsOpen(false);
+          }}
+          closable={true}
+          open={isOpen}
+          styles={{
+            body: {
+              padding: 10,
+            },
+          }}
+          closeIcon={<ArrowRightOutlined />}
+        >
+          <MobileMenuWrap>
+            <Menu
+              mode="vertical"
+              className={"mobile-menu"}
+              items={[
+                ...items,
+                {
+                  type: "group", // Must have
+                  label: t("group.lang"),
+                },
+                {
+                  label: `한국어`,
+                  key: "ko",
+                },
+                {
+                  label: `English`,
+                  key: "en",
+                },
+              ]}
+              onClick={onClickMenu}
+            />
+          </MobileMenuWrap>
+        </Drawer>
+      </Layer>
+      <Dummy />
+    </>
   );
 }
 
 const Container = styled(PageContainer)``;
-
+const Dummy = styled.div`
+  height: 5.5rem;
+  ${mediaMax.md} {
+    height: 3rem;
+    padding-top: 3px;
+  }
+`;
 const Layer = styled.div`
   position: fixed;
   width: 100%;
@@ -195,6 +218,7 @@ const Layer = styled.div`
 
   &.scrolled {
     background: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid var(--border-color);
     .gnbWrapper {
       .logo {
         svg {
@@ -318,7 +342,8 @@ const MobileMenuWrap = styled.div`
     margin: 4px 0;
     font-weight: 700;
   }
-  .ant-menu-item-selected, .ant-menu-item-active {
+  .ant-menu-item-selected,
+  .ant-menu-item-active {
     background: var(--ax_gray_1);
   }
 `;

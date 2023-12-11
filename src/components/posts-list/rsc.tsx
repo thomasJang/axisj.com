@@ -1,7 +1,9 @@
 import getPosts from "@/lib/get-posts";
-import PostsList from ".";
+import { PostList } from "@/components/posts-list/PostList";
+
+const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export async function PostListRSC({ paginate }: { paginate?: boolean }) {
   const posts = await getPosts(true);
-  return <PostsList posts={posts} paginate={paginate} />;
+  return <PostList posts={posts} paginate={paginate} />;
 }

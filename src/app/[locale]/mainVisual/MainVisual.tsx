@@ -121,7 +121,13 @@ const Div = styled.div`
     background-position: center;
     background:#eaeaea url('/video/ax-hero.jpg') no-repeat top left;
     background-size:cover;
-      overflow: hidden;
+    overflow: hidden;
+
+    padding-bottom: 5.5rem;
+    ${mediaMax.md} {
+      padding-bottom: 3rem;
+    }
+    
     video{
       display: block;
       min-width:100%;

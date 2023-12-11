@@ -43,9 +43,6 @@ export function Footer({}: Props) {
             <div className={"foptions"}>
               <Select
                 defaultValue={t("footer-family")}
-                style={{
-                  width: 200,
-                }}
                 // onChange={handleFamilyChange}
                 options={[
                   { label: `${t("footer-select-1")}`, value: "axisj.com" },
@@ -55,6 +52,7 @@ export function Footer({}: Props) {
                   },
                 ]}
                 className={"fopt1"}
+                bordered={false}
               />
               <Link
                 href={"https://www.instagram.com/axisj_official/"}
@@ -114,9 +112,11 @@ const Div = styled.div`
     align-items: center;
     justify-content: center;
 
-    svg [fill="white"] {
-      fill: var(--txt-body);
+    svg {
       display: block;
+    }
+    svg [fill] {
+      fill: var(--txt-body);
     }
     .fopt1 {
       //antd selector...

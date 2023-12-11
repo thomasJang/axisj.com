@@ -1,0 +1,38 @@
+.article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.article .date {
+    font-size: 1rem;
+    color: var(--txt-body);
+}
+.article .title {
+    font-size: 2rem;
+    color: var(--txt-display);
+    line-height: 3.5rem;
+}
+.article .subtitle {
+    font-size: 1.5rem;
+    color: var(--txt-body);
+    font-weight: 500;
+}
+.article .body {
+    margin: 1rem 0;
+    font-size: 1rem;
+    color: var(--txt-body);
+    line-height: 1.5rem;
+    max-width: 1000px;
+}
+.article .body p {
+    margin: 1rem 0;
+}
+
+.author {
+    margin-top: 2rem;
+}
+.author b {
+
+}

@@ -38,18 +38,12 @@ export const getPosts = cache(async (includeThirdPartyPosts?: boolean) => {
           },
         });
         const commitInfo = await commitInfoResponse.json();
+
         let lastModified = 0;
         if (commitInfo?.length) {
           lastModified = new Date(
             commitInfo[0].commit.committer.date
           ).getTime();
-
-          if (
-            lastModified - new Date(data.date).getTime() <
-            24 * 60 * 60 * 1000
-          ) {
-            lastModified = 0;
-          }
         }
 
         return { ...data, body: content, lastModified } as Post;

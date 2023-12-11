@@ -1,9 +1,15 @@
 import { PostListRSC } from "@/components/posts-list/rsc";
-import { Suspense } from "react";
+import React, { Suspense } from "react";
 
 const Blog = async () => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense
+      fallback={
+        <div className={"page-container"}>
+          <div className={"loader"}></div>
+        </div>
+      }
+    >
       <PostListRSC paginate={true} />
     </Suspense>
   );

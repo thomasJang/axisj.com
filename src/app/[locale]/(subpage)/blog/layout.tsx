@@ -1,8 +1,6 @@
-import Outline from "@/components/blog-layout";
-
 export const metadata = {
-  title: "Blog",
-  description: "Posts and tips, mostly about software.",
+  title: "AXISJ Blog",
+  description: "AXISJ Blog",
   alternates: {
     canonical: "https://axisj.com/blog",
   },
@@ -13,9 +11,5 @@ export default function BlogLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <Outline type="layout" name="Blog">
-      <article>{children}</article>
-    </Outline>
-  );
+  return <article>{children}</article>;
 }
