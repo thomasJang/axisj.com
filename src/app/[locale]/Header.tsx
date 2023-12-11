@@ -22,7 +22,6 @@ import { useRouter } from "next/navigation";
 import {ArrowRightOutlined} from "@ant-design/icons";
 
 interface Props {}
-
 export function Header({}: Props) {
   const t = useScopedI18n("menu");
   const tt = useI18n();
