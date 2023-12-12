@@ -59,10 +59,8 @@ body {
 body {
   color: var(--black);
   background: var(--background);
-  font-size: 16px;
   overflow-x: hidden;
   font-family: var(--font);
-  line-height: 150%;
 }
 
 h1 {
@@ -177,5 +175,5 @@ a {
 }
 
 pre {
-  font-size: 13px;
+  font-size: 12px;
 }
