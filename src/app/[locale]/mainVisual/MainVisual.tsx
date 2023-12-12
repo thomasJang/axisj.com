@@ -171,6 +171,7 @@ const Div = styled.div`
           font-size:2rem;
           display: inline-block;
           color: var(--txt-display);
+          font-family: var(--font-display);
         }
         p{
           font-size:1.125rem;

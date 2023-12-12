@@ -98,6 +98,7 @@ const Layer = styled.div`
     line-height: 1.75rem;
     font-weight: 700;
     text-align: center;
+    font-family: var(--font-display);
     ${mediaMax.md} {
       text-align: left;
     }
@@ -107,6 +108,7 @@ const Layer = styled.div`
     font-size: 0.875rem;
     line-height: 1.3rem;
     margin: 1.75rem 2rem;
+    font-family: var(--font-display);
   }
 
   .historySymbol {
@@ -188,7 +190,7 @@ const Layer = styled.div`
       li {
         display: inline-flex;
         padding: 1rem 0;
-
+        font-family: var(--font-display);
         &.left {
           padding-right: 50%;
           justify-content: flex-end;

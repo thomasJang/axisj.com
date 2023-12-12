@@ -1,11 +1,12 @@
 @import "../../public/fonts/GmarketSans/GmarketSans.css";
-@import "../../public/fonts/NotoSansKR/NotoSansKR.css";
+@import '../../public/fonts/Pretendard/web/static/pretendard.css';
 
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font: "GmarketSans", "NotoSansKR", "sans-serif";
-  --font-body: "NotoSansKR", "sans-serif";
+  --font: "Pretendard", "sans-serif";
+  --font-body: "Pretendard", "sans-serif";
+  --font-display: "GmarketSans", "sans-serif";
 
   --foreground: #606060;
   --background: #fff;
