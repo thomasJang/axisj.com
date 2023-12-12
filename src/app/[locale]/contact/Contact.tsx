@@ -102,6 +102,7 @@ const Layer = styled.div`
     font-weight: normal;
     margin-bottom: 3rem;
     text-align: center;
+    font-family: var(--font-display);
   }
 
   .title {
@@ -114,6 +115,7 @@ const Layer = styled.div`
   dt {
     font-weight: 700;
     margin-top: 1rem;
+    font-family: var(--font-display);
   }
   dd {
     padding: 0.5rem 0;

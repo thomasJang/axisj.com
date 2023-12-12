@@ -4,7 +4,7 @@ import { PageContainer } from "@/styles/Layouts";
 import { useScopedI18n } from "@/locales/client";
 import { Col, Row } from "antd";
 import { dangerouslySetInnerHTML } from "@/utils/string/dangerouslySetInnerHTML";
-import {SMixinFlexColumn, SMixinFlexRow} from "@/styles/emotion";
+import { SMixinFlexColumn, SMixinFlexRow } from "@/styles/emotion";
 import { mediaMax } from "@/styles/media";
 import Link from "next/link";
 
@@ -18,25 +18,21 @@ export function AXFrame({}: Props) {
       <Container>
         <h2>{t("tit")}</h2>
 
-        <Row>
-          <Col sm={24} lg={24} xl={{ offset: 2, span: 20 }}>
-            <Row
-              gutter={[
-                { xs: 16, sm: 16, md: 32, lg: 64 },
-                { xs: 16, sm: 16, md: 64 },
-              ]}
-            >
-              <Col sm={24} md={12}>
-                <img
-                  src={"/images/axframe-isometric.png"}
-                  alt={"axframe-img.jpg"}
-                  style={{ width: "100%", borderRadius: 10 }}
-                />
-              </Col>
-              <Col sm={24} md={12}>
-                <p {...dangerouslySetInnerHTML(t("desc"))} />
-              </Col>
-            </Row>
+        <Row
+          gutter={[
+            { xs: 16, sm: 16, md: 32, lg: 64 },
+            { xs: 16, sm: 16, md: 64 },
+          ]}
+        >
+          <Col sm={24} md={12}>
+            <img
+              src={"/images/axframe-isometric.png"}
+              alt={"axframe-img.jpg"}
+              style={{ width: "100%", borderRadius: 10 }}
+            />
+          </Col>
+          <Col sm={24} md={12}>
+            <p {...dangerouslySetInnerHTML(t("desc"))} />
           </Col>
         </Row>
 
@@ -108,6 +104,7 @@ const Layer = styled.div`
     margin-bottom: 3rem;
     color: var(--white);
     text-align: center;
+    font-family: var(--font-display);
   }
 
   h3 {
@@ -133,7 +130,6 @@ const Layer = styled.div`
 const UseCaseWrap = styled.div`
   ${SMixinFlexColumn("stretch", "stretch")};
   gap: 2rem;
-
 `;
 const UseCase = styled.div`
   ${SMixinFlexRow("stretch", "flex-start")};
@@ -142,7 +138,6 @@ const UseCase = styled.div`
   margin: 0 auto;
   padding: 1.5rem;
   gap: 1.5rem;
-
 
   ${mediaMax.md} {
     ${SMixinFlexColumn("stretch", "flex-start")};
@@ -168,6 +163,7 @@ const UseCase = styled.div`
     .titles {
       ${SMixinFlexColumn("flex-start", "flex-start")};
       gap: 0.5rem;
+      font-family: var(--font-display);
       h5 {
         text-align: center;
         font-size: 1.1rem;
@@ -175,10 +171,13 @@ const UseCase = styled.div`
     }
     p {
       color: var(--txt-body);
+      font-size: 0.96rem;
+      line-height: 1.4;
     }
     [role="read"] {
       font-size: 14px;
       font-weight: bold;
+      font-family: var(--font-display);
       &:hover {
         color: var(--txt-link-hover);
       }

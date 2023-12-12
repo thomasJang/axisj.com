@@ -112,6 +112,7 @@ const Layer = styled.div`
       line-height: 1.5rem;
       word-break: keep-all;
       color: var(--txt-body);
+      font-family: var(--font-display);
     }
   }
   .colorBox {

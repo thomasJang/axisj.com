@@ -307,7 +307,7 @@ const Layer = styled.div`
   //ANTD Override....
   .ant-menu {
     //ul...
-    font-family: var(--font);
+    font-family: var(--font-display);
     flex-grow: 1;
     flex-shrink: 1;
     align-items: center;

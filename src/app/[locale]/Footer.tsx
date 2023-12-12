@@ -120,6 +120,7 @@ const Div = styled.div`
   .fcopyright {
     font-size: 0.75rem;
     color: var(--txt-body);
+    font-family: var(--font-display);
   }
   .foptions {
     display: flex;
@@ -127,6 +128,7 @@ const Div = styled.div`
     align-items: center;
     justify-content: center;
     font-size: 0.75rem;
+    font-family: var(--font-display);
 
     svg {
       display: block;
@@ -138,6 +140,7 @@ const Div = styled.div`
   .faddr {
     font-size: 0.75rem;
     color: var(--txt-body);
+    font-family: var(--font-display);
   }
   .divider {
     border-top: 0.063rem solid var(--border-color);

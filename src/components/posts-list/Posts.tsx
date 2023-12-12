@@ -90,6 +90,7 @@ const PostCard = styled.div`
     .titles {
       ${SMixinFlexColumn("flex-start", "flex-start")};
       flex: 1;
+      font-family: var(--font-display);
     }
 
     [role="date"] {
@@ -109,11 +110,13 @@ const PostCard = styled.div`
   p {
     color: var(--txt-body);
     font-size: 0.9rem;
+    line-height: 1.4;
   }
 
   [role="read"] {
     font-size: 14px;
     font-weight: bold;
+    font-family: var(--font-display);
     &:hover {
       color: var(--txt-link-hover);
     }

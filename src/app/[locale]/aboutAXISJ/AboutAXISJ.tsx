@@ -13,11 +13,13 @@ export function AboutAXISJ({}: Props) {
       {cl === "ko" ? (
         <Container>
           <blockquote>
-            AXISJ는 열정적이고 창의적인 프로그래머들이 모여 혁신적인 기술 회사를 만들었습니다.<br/>
-            최신 기술 트렌드를 선도하며, 다양한 분야에서
-            독창적이고 효과적인 솔루션을 개발하는 데 자부심을 가지고 있습니다.
-            현재는 AXFrame 프레임워크를 연구 개발하여 다양하고 혁신적인 솔루션을
-            기획하고 있습니다.
+            AXISJ는 열정적이고 창의적인 프로그래머들이 모여 혁신적인 기술 회사를
+            만들었습니다.
+            <br />
+            최신 기술 트렌드를 선도하며, 다양한 분야에서 독창적이고 효과적인
+            솔루션을 개발하는 데 자부심을 가지고 있습니다. 현재는 AXFrame
+            프레임워크를 연구 개발하여 다양하고 혁신적인 솔루션을 기획하고
+            있습니다.
           </blockquote>
           <h5>AXFrame</h5>
           <p>
@@ -95,17 +97,21 @@ const Div = styled.div`
   padding: 60px 0;
   color: var(--txt-body);
 
-  line-height: 1.8;
+  line-height: 1.5;
+
   p {
     margin: 1em 0;
   }
+
   h5 {
     color: var(--txt-display);
+    font-family: var(--font-display);
   }
 
   blockquote {
     margin: 0 0 1em;
     color: var(--txt-display);
+    font-family: var(--font-display);
   }
 
   ${mediaMax.md} {

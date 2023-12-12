@@ -91,6 +91,7 @@ const Layer = styled.div`
   .title {
     font-size: 1.2rem;
     font-weight: bold;
+    font-family: var(--font-display);
   }
 
   p {

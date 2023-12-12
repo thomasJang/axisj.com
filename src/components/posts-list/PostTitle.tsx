@@ -22,4 +22,5 @@ const Layer = styled.div`
   padding: 4rem 0;
   background: var(--line-gr);
   font-size: 2.5rem;
+  font-family: var(--font-display);
 `;

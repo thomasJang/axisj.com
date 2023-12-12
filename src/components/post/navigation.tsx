@@ -15,7 +15,7 @@ const Navigation = ({ previous, next }: { previous?: Post; next?: Post }) => {
           {previous && (
             <Link href={`/blog/${previous.slug}`}>
               <div className={styles.title}>
-                <ArrowLeftOutlined /> OLDER
+                <ArrowLeftOutlined />
               </div>
               {previous.title}
             </Link>
@@ -26,7 +26,7 @@ const Navigation = ({ previous, next }: { previous?: Post; next?: Post }) => {
           {next && (
             <Link href={`/blog/${next.slug}`}>
               <div className={styles.title}>
-                NEWER <ArrowRightOutlined />
+                <ArrowRightOutlined />
               </div>
               {next.title}
             </Link>
