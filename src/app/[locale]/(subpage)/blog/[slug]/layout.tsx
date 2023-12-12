@@ -22,7 +22,19 @@ export const generateMetadata = async ({
       canonical: `https://axisj.com/blog/${params.slug}`,
     },
     openGraph: {
-      images: "/og-image.png",
+      title: post?.title,
+      description: post?.description,
+      siteName: "AXISJ Official Website",
+      locale: "en",
+      type: "website",
+      images: [
+        {
+          url: `https://axisj.com/images/og-image.jpg`,
+          width: 800,
+          height: 400,
+          alt: "AXISJ Official Website",
+        },
+      ],
     },
   };
 };

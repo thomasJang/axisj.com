@@ -20,11 +20,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `https://axisj.com/api/og?title=${encodeURIComponent(
-          "AXISJ Official Website"
-        )}`,
-        width: 1200,
-        height: 630,
+        url: `https://axisj.com/images/og-image.jpg`,
+        width: 800,
+        height: 400,
         alt: "AXISJ Official Website",
       },
     ],
