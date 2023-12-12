@@ -62,8 +62,8 @@ export default Posts;
 
 const PostWrap = styled.div`
   display: grid;
-  gap: 32px;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 
   ${mediaMax.md} {
     gap: 16px;

@@ -39,25 +39,20 @@ export function AXFrame({}: Props) {
         <h3>{t("use-case")}</h3>
         <UseCaseWrap>
           <UseCase>
-            <img src={"/images/planeat.jpg"} alt={"PlanEAT Choice"} />
+            <img src={"/images/gms.jpg"} alt={"We"} />
             <div className={"meta"}>
               <div className={"titles"}>
-                <h5>{t("use-case.planeat.title")}</h5>
-                <span>{t("use-case.planeat.customer")}</span>
+                <h5>{t("use-case.gms.title")}</h5>
+                <span>{t("use-case.gms.customer")}</span>
               </div>
-              <p {...dangerouslySetInnerHTML(t("use-case.planeat.desc"))} />
+              <p {...dangerouslySetInnerHTML(t("use-case.gms.desc"))} />
+
+              <Link href={`/blog/weight-lifting`} role={"read"}>
+                Read More {`>>`}
+              </Link>
             </div>
           </UseCase>
-          <UseCase>
-            <img src={"/images/bh.jpg"} alt={"SH project"} />
-            <div className={"meta"}>
-              <div className={"titles"}>
-                <h5>{t("use-case.bh.title")}</h5>
-                <span>{t("use-case.bh.customer")}</span>
-              </div>
-              <p {...dangerouslySetInnerHTML(t("use-case.bh.desc"))} />
-            </div>
-          </UseCase>
+
           <UseCase>
             <img src={"/images/wefor.jpg"} alt={"TeleMarketing Solution"} />
             <div className={"meta"}>
@@ -72,14 +67,26 @@ export function AXFrame({}: Props) {
               </Link>
             </div>
           </UseCase>
+
           <UseCase>
-            <img src={"/images/gms.jpg"} alt={"We"} />
+            <img src={"/images/bh.jpg"} alt={"SH project"} />
             <div className={"meta"}>
               <div className={"titles"}>
-                <h5>{t("use-case.gms.title")}</h5>
-                <span>{t("use-case.gms.customer")}</span>
+                <h5>{t("use-case.bh.title")}</h5>
+                <span>{t("use-case.bh.customer")}</span>
               </div>
-              <p {...dangerouslySetInnerHTML(t("use-case.gms.desc"))} />
+              <p {...dangerouslySetInnerHTML(t("use-case.bh.desc"))} />
+            </div>
+          </UseCase>
+
+          <UseCase>
+            <img src={"/images/planeat.jpg"} alt={"PlanEAT Choice"} />
+            <div className={"meta"}>
+              <div className={"titles"}>
+                <h5>{t("use-case.planeat.title")}</h5>
+                <span>{t("use-case.planeat.customer")}</span>
+              </div>
+              <p {...dangerouslySetInnerHTML(t("use-case.planeat.desc"))} />
             </div>
           </UseCase>
         </UseCaseWrap>

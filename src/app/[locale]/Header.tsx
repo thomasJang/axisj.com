@@ -120,7 +120,7 @@ export function Header({}: Props) {
     <>
       <Layer
         className={
-          scroll || pathname.replace(`/${cl}`, "") !== "" ? "scrolled" : ""
+          scroll || pathname?.replace(`/${cl}`, "") !== "" ? "scrolled" : ""
         }
         ref={headerWrapRef}
       >
@@ -208,15 +208,6 @@ const Layer = styled.div`
     backdrop-filter: blur(0.2rem);
     background: rgba(255, 255, 255, 0.9);
     border-bottom: 1px solid var(--border-color);
-    .gnbWrapper {
-      .logo {
-        svg {
-          path {
-            fill: var(--black);
-          }
-        }
-      }
-    }
   }
 
   .gnbWrapper {
