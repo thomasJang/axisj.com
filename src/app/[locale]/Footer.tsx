@@ -3,12 +3,14 @@
 import * as React from "react";
 import styled from "@emotion/styled";
 import { PageContainer } from "@/styles/Layouts";
-import { Col, Divider, Row, Select } from "antd";
+import { Col, Divider, Row, Select, Space, Dropdown } from "antd";
 import Link from "next/link";
 import { mediaMax } from "@/styles/media";
 import { useI18n } from "@/locales/client";
 import { IconInstagram } from "@/components/common/IconInstagram";
 import { IconGithub } from "@/components/common/IconGithub";
+import { DownOutlined } from "@ant-design/icons";
+import { SMixinFlexRow } from "@/styles/emotion";
 
 interface Props {}
 
@@ -32,7 +34,7 @@ export function Footer({}: Props) {
             </span>
           </Col>
           <Col
-            span={14}
+            xs={24}
             sm={24}
             md={12}
             lg={12}
@@ -41,21 +43,31 @@ export function Footer({}: Props) {
             className={"colRight"}
           >
             <div className={"foptions"}>
-              <Select
-                defaultValue={t("footer-family")}
-                style={{
-                  width: 200,
-                }}
-                // onChange={handleFamilyChange}
-                options={[
-                  { label: `${t("footer-select-1")}`, value: "axisj.com" },
-                  {
-                    label: `${t("footer-select-2")}`,
-                    value: "axframe.axisj.com",
+              <Dropdown
+                menu={{
+                  items: [
+                    {
+                      label: `${t("footer-select-1")}`,
+                      key: "https://axisj.com",
+                    },
+                    {
+                      label: `${t("footer-select-2")}`,
+                      key: "https://axframe.axisj.com",
+                    },
+                  ],
+                  onClick: (info) => {
+                    window.open(info.key, "_blank");
                   },
-                ]}
-                className={"fopt1"}
-              />
+                }}
+              >
+                <a>
+                  <Space>
+                    {t("footer-family")}
+                    <DownOutlined />
+                  </Space>
+                </a>
+              </Dropdown>
+
               <Link
                 href={"https://www.instagram.com/axisj_official/"}
                 target={"_blank"}
@@ -75,8 +87,8 @@ export function Footer({}: Props) {
         </Row>
         <Divider className={"divider"} />
         <Row>
-          <Col>
-            <span className={"faddr"}>{t("footer-addr")}</span>
+          <Col span={24} className={"faddr"}>
+            <span>{t("footer-addr")}</span>
           </Col>
         </Row>
       </Container>
@@ -93,6 +105,7 @@ const Div = styled.div`
   z-index: 5;
   overflow-x: hidden;
   border-top: 1px solid var(--border-color);
+  background: var(--background);
 
   .colLeft {
     align-items: center;
@@ -110,28 +123,16 @@ const Div = styled.div`
   }
   .foptions {
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
     align-items: center;
     justify-content: center;
+    font-size: 0.75rem;
 
-    svg [fill="white"] {
-      fill: var(--txt-body);
+    svg {
       display: block;
     }
-    .fopt1 {
-      //antd selector...
-      .ant-select-selector {
-        color: var(--txt-body);
-        background: transparent;
-        border: 0.063rem solid var(--border-color);
-      }
-      .ant-select-arrow {
-        color: var(--txt-body);
-      }
-    }
-    .fopt2 {
-    }
-    .fopt3 {
+    svg [fill] {
+      fill: var(--txt-body);
     }
   }
   .faddr {
@@ -142,12 +143,22 @@ const Div = styled.div`
     border-top: 0.063rem solid var(--border-color);
   }
   ${mediaMax.md} {
-    padding: 6rem 2rem;
+    padding: 1rem;
+    .divider {
+      margin: 1rem auto;
+      width: 50%;
+      min-width: auto;
+    }
     .colLeft {
       padding: 1rem 0;
+      ${SMixinFlexRow("center", "center")};
     }
     .colRight {
-      justify-content: flex-start;
+      ${SMixinFlexRow("center", "center")};
+    }
+    .faddr {
+      text-align: center;
+      line-height: 1.5;
     }
   }
 `;

@@ -1,15 +1,9 @@
 import * as React from "react";
 import styled from "@emotion/styled";
 import { PageContainer } from "@/styles/Layouts";
-import { useI18n, useScopedI18n } from "@/locales/client";
-import { IconDesign1 } from "@/components/common/IconDesign1";
-import { IconDesign2 } from "@/components/common/IconDesign2";
-import { IconDesign3 } from "@/components/common/IconDesign3";
-import { IconDesign4 } from "@/components/common/IconDesign4";
-import { Button, Col, Row, Space } from "antd";
-import { dangerouslySetInnerHTML } from "@/utils/string/dangerouslySetInnerHTML";
-import Image from "next/image";
-import { SMixinFlexColumn, SMixinFlexRow } from "@/styles/emotion";
+import { useScopedI18n } from "@/locales/client";
+import { Button, Col, Row } from "antd";
+import { SMixinFlexRow } from "@/styles/emotion";
 import { mediaMax } from "@/styles/media";
 import { LinkOutlined } from "@ant-design/icons";
 
@@ -51,11 +45,17 @@ export function Contact({}: Props) {
                   </dd>
                   <dt>{t("tel")}</dt>
                   <dd>
-                    <p>+82 02-2088-5725</p>
+                    <p>
+                      <a href={"tel:+82 02-2088-5725"}>+82 02-2088-5725</a>
+                    </p>
                   </dd>
                   <dt>{t("email")}</dt>
                   <dd>
-                    <p>sales@axisj.com</p>
+                    <p>
+                      <a href={"mailto:sales@axisj.com"} target="_blank">
+                        sales@axisj.com
+                      </a>
+                    </p>
                   </dd>
                 </dl>
 
@@ -66,7 +66,7 @@ export function Contact({}: Props) {
                       window.open("https://naver.me/xiw19Q1h", "_blank");
                     }}
                   >
-                    NAVER 지도
+                    {t("naver-map")}
                   </Button>
                   <Button
                     icon={<LinkOutlined />}
@@ -74,7 +74,7 @@ export function Contact({}: Props) {
                       window.open("https://kko.to/QiXd4lAnyd", "_blank");
                     }}
                   >
-                    DAUM 지도
+                    {t("daum-map")}
                   </Button>
                 </ButtonWrap>
               </Col>
@@ -121,6 +121,7 @@ const Layer = styled.div`
       font-size: 1.1rem;
       line-height: 1.4rem;
       color: var(--txt-body);
+      margin-bottom: 0.5rem;
     }
   }
 `;

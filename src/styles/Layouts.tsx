@@ -20,9 +20,9 @@ export const PageContainer = styled.div`
     max-width: ${maxwidth.md};
   }
   ${media.xl} {
-    max-width: ${maxwidth.xl};
+    max-width: 1000px;
   }
   ${media.ul} {
-    max-width: ${maxwidth.ul};
+    max-width: 1000px;
   }
 `;

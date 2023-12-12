@@ -94,10 +94,10 @@ const Layer = styled.div`
   padding: 5rem 2rem;
 
   h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     line-height: 1.75rem;
-    font-weight: 700;
     margin-bottom: 1.5rem;
+    font-weight: normal;
   }
   h4 {
     font-size: 1rem;

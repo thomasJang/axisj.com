@@ -1,16 +1,12 @@
 import * as React from "react";
 import styled from "@emotion/styled";
 import { PageContainer } from "@/styles/Layouts";
-import { useI18n, useScopedI18n } from "@/locales/client";
-import { IconDesign1 } from "@/components/common/IconDesign1";
-import { IconDesign2 } from "@/components/common/IconDesign2";
-import { IconDesign3 } from "@/components/common/IconDesign3";
-import { IconDesign4 } from "@/components/common/IconDesign4";
+import { useScopedI18n } from "@/locales/client";
 import { Col, Row } from "antd";
 import { dangerouslySetInnerHTML } from "@/utils/string/dangerouslySetInnerHTML";
-import Image from "next/image";
-import { SMixinFlexColumn, SMixinFlexRow } from "@/styles/emotion";
+import { SMixinFlexColumn } from "@/styles/emotion";
 import { mediaMax } from "@/styles/media";
+import Link from "next/link";
 
 interface Props {}
 
@@ -50,82 +46,44 @@ export function AXFrame({}: Props) {
             <img src={"/images/planeat.jpg"} alt={"PlanEAT Choice"} />
             <div className={"meta"}>
               <div className={"titles"}>
-                <h5>PlanEAT Choice</h5>
-                <span>SAMSUNG, IMTSoft</span>
+                <h5>{t("use-case.planeat.title")}</h5>
+                <span>{t("use-case.planeat.customer")}</span>
               </div>
-              <p>
-                PlanEAT Choice는 삼성전자 임직원들을 위한 삼성 그룹사 급식 관리
-                솔루션입니다. 2022년 하반기부터 프로젝트를 준비하기 시작하여
-                2023년 12월에 되어서 프로젝트를 마무리 할 수 있었습니다. <br />
-                본 프로젝트는 ASP(급식업체 관리자) PORTAL(임직원 포털)
-                모바일APP로 구성되며 삼성그룹사 마다 별도의 인스턴스가를
-                구성해야 했기에 프로젝트 규모나 설치면에서 블록버스터 급이라
-                말할 수 있었습니다.
-                <br />
-                AXFrame의 다양한 기능들을 대규모 프로젝트에 적용해볼 수 있었고
-                다양한 사용자들이 사용하는 폐쇄망환경에서 AXFrame이 검증될 수
-                있었던 좋은 기회 였습니다.
-              </p>
+              <p {...dangerouslySetInnerHTML(t("use-case.planeat.desc"))} />
             </div>
           </UseCase>
           <UseCase>
             <img src={"/images/bh.jpg"} alt={"SH project"} />
             <div className={"meta"}>
               <div className={"titles"}>
-                <h5>주거상향 전문가 시스템</h5>
-                <span>서울주택도시공사</span>
+                <h5>{t("use-case.bh.title")}</h5>
+                <span>{t("use-case.bh.customer")}</span>
               </div>
-              <p>
-                PlanEAT Choice는 삼성전자 임직원들을 위한 삼성 그룹사 급식 관리
-                솔루션입니다. 2022년 하반기부터 프로젝트를 준비하기 시작하여
-                2023년 12월에 되어서 프로젝트를 마무리 할 수 있었습니다. 본
-                프로젝트는 ASP(급식업체 관리자) PORTAL(임직원 포털) 모바일APP로
-                구성되며 삼성그룹사 마다 별도의 인스턴스가를 구성해야 했기에
-                프로젝트 규모나 설치면에서 블록버스터 급이라 말할 수 있었습니다.
-                AXFrame의 다양한 기능들을 대규모 프로젝트에 적용해볼 수 있었고
-                다양한 사용자들이 사용하는 폐쇄망환경에서 AXFrame이 검증될 수
-                있었던 좋은 기회 였습니다.
-              </p>
+              <p {...dangerouslySetInnerHTML(t("use-case.bh.desc"))} />
             </div>
           </UseCase>
           <UseCase>
             <img src={"/images/wefor.jpg"} alt={"TeleMarketing Solution"} />
             <div className={"meta"}>
               <div className={"titles"}>
-                <h5>TeleMarketing Solution</h5>
-                <span>weFor, AXISJ</span>
+                <h5>{t("use-case.tm.title")}</h5>
+                <span>{t("use-case.tm.customer")}</span>
               </div>
-              <p>
-                PlanEAT Choice는 삼성전자 임직원들을 위한 삼성 그룹사 급식 관리
-                솔루션입니다. 2022년 하반기부터 프로젝트를 준비하기 시작하여
-                2023년 12월에 되어서 프로젝트를 마무리 할 수 있었습니다. 본
-                프로젝트는 ASP(급식업체 관리자) PORTAL(임직원 포털) 모바일APP로
-                구성되며 삼성그룹사 마다 별도의 인스턴스가를 구성해야 했기에
-                프로젝트 규모나 설치면에서 블록버스터 급이라 말할 수 있었습니다.
-                AXFrame의 다양한 기능들을 대규모 프로젝트에 적용해볼 수 있었고
-                다양한 사용자들이 사용하는 폐쇄망환경에서 AXFrame이 검증될 수
-                있었던 좋은 기회 였습니다.
-              </p>
+              <p {...dangerouslySetInnerHTML(t("use-case.tm.desc"))} />
+
+              <Link href={`/blog/tm-solution`} role={"read"}>
+                Read More {`>>`}
+              </Link>
             </div>
           </UseCase>
           <UseCase>
             <img src={"/images/gms.jpg"} alt={"We"} />
             <div className={"meta"}>
               <div className={"titles"}>
-                <h5>역도경기관리시스템</h5>
-                <span>AXISJ</span>
+                <h5>{t("use-case.gms.title")}</h5>
+                <span>{t("use-case.gms.customer")}</span>
               </div>
-              <p>
-                PlanEAT Choice는 삼성전자 임직원들을 위한 삼성 그룹사 급식 관리
-                솔루션입니다. 2022년 하반기부터 프로젝트를 준비하기 시작하여
-                2023년 12월에 되어서 프로젝트를 마무리 할 수 있었습니다. 본
-                프로젝트는 ASP(급식업체 관리자) PORTAL(임직원 포털) 모바일APP로
-                구성되며 삼성그룹사 마다 별도의 인스턴스가를 구성해야 했기에
-                프로젝트 규모나 설치면에서 블록버스터 급이라 말할 수 있었습니다.
-                AXFrame의 다양한 기능들을 대규모 프로젝트에 적용해볼 수 있었고
-                다양한 사용자들이 사용하는 폐쇄망환경에서 AXFrame이 검증될 수
-                있었던 좋은 기회 였습니다.
-              </p>
+              <p {...dangerouslySetInnerHTML(t("use-case.gms.desc"))} />
             </div>
           </UseCase>
         </UseCaseWrap>
@@ -152,6 +110,7 @@ const Layer = styled.div`
   }
 
   h3 {
+    font-size: 1.8rem;
     color: var(--white);
     text-align: center;
     margin-top: 3rem;
@@ -165,8 +124,9 @@ const Layer = styled.div`
 
   p {
     margin: 0;
-    line-height: 1.4rem;
     color: var(--white);
+    font-size: 1.05rem;
+    font-weight: 300;
   }
 `;
 
@@ -183,7 +143,6 @@ const UseCaseWrap = styled.div`
 const UseCase = styled.div`
   background: var(--white);
   border-radius: 10px;
-  max-width: 400px;
   margin: 0 auto;
   img {
     width: 100%;
@@ -201,11 +160,22 @@ const UseCase = styled.div`
     .titles {
       ${SMixinFlexColumn("flex-start", "center")};
       gap: 0.5rem;
+      h5 {
+        text-align: center;
+        font-size: 1.1rem;
+      }
     }
     p {
       color: var(--txt-body);
-      font-size: 0.8rem;
-      line-height: 1.2rem;
+      font-size: 1rem;
+      font-weight: 300;
+    }
+    [role="read"] {
+      font-size: 14px;
+      font-weight: bold;
+      &:hover {
+        color: var(--txt-link-hover);
+      }
     }
   }
 `;

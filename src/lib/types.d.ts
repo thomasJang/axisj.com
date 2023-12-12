@@ -1,22 +1,24 @@
 export type Post = {
-  title: string
-  slug: string
-  date: string
-  tags: string[]
-  description: string
-  body: string
-  lastModified?: number
-  views?: number
+  title: string;
+  subtitle: string;
+  writer: string;
+  slug: string;
+  date: string;
+  tags: string[];
+  description: string;
+  body: string;
+  lastModified?: number;
+  views?: number;
   // Third party only
-  isThirdParty?: boolean
-  href?: string
-}
+  isThirdParty?: boolean;
+  href?: string;
+};
 
 export type Project = {
-  title: string
-  description: string
-  href: string
-  role: string
-  years: string[]
-  stars?: number
-}
+  title: string;
+  description: string;
+  href: string;
+  role: string;
+  years: string[];
+  stars?: number;
+};

@@ -11,24 +11,32 @@ export function MDXImage({
   alt: string;
 }) {
   let widthFromSrc, heightFromSrc;
-  const url = new URL(src, "https://axisj.com");
+  const url = new URL(
+    src,
+    process.env.NODE_ENV === "production"
+      ? "https://axisj.com"
+      : "http://localhost:3000"
+  );
+
   const widthParam = url.searchParams.get("w") || url.searchParams.get("width");
   const heightParam =
     url.searchParams.get("h") || url.searchParams.get("height");
-  if (widthParam) {
-    widthFromSrc = parseInt(widthParam);
-  }
-  if (heightParam) {
-    heightFromSrc = parseInt(heightParam);
-  }
+  // if (widthParam) {
+  //   widthFromSrc = parseInt(widthParam);
+  // }
+  // if (heightParam) {
+  //   heightFromSrc = parseInt(heightParam);
+  // }
+  //
+  // const imageProps = {
+  //   src,
+  //   alt,
+  //   // tweak these to your liking
+  //   width: widthFromSrc ?? 800,
+  //   height: heightFromSrc ?? 600,
+  // };
 
-  const imageProps = {
-    src,
-    alt,
-    // tweak these to your liking
-    height: heightFromSrc || 450,
-    width: widthFromSrc || 550,
-  };
+  // return <NextImage {...imageProps} />;
 
-  return <NextImage {...imageProps} />;
+  return <img src={src} alt={alt} width={widthParam as any} />;
 }

@@ -2,18 +2,17 @@ import * as React from "react";
 import styled from "@emotion/styled";
 import { PageContainer } from "@/styles/Layouts";
 import { mediaMax } from "@/styles/media";
-import { useI18n } from "@/locales/client";
-import { LogoAXSymbol } from "@/components/common/LogoAXSymbol";
+import { useScopedI18n } from "@/locales/client";
 
 interface Props {}
 
 export function History({}: Props) {
-  const t = useI18n();
+  const t = useScopedI18n("history");
 
   return (
     <Layer>
       <Container>
-        <h3>{t("history-title-1")}</h3>
+        <h3>{t("title")}</h3>
 
         <div className={"historySymbol"}></div>
 
@@ -23,58 +22,56 @@ export function History({}: Props) {
               <div className={"historyBox"}>
                 <span className={"ball red"}></span>
                 <span className={"textYear"}>2023.10</span>
-                <span className={"textDone"}>{t("history-text-6")}</span>
+                <span className={"textDone"}>{t("6")}</span>
               </div>
             </li>
-            <li className={"li-5 right"} style={{ marginBottom: 20 }}>
+            <li className={"li-5 right"} style={{ marginBottom: "3rem" }}>
               <div className={"historyBox"}>
                 <span className={"ball red"}></span>
                 <span className={"textYear"}>2023</span>
-                <span className={"textDone"}>{t("history-text-5")}</span>
+                <span className={"textDone"}>{t("5")}</span>
               </div>
             </li>
-            <li className={"li-4 right"}>
+            <li className={"li-4 right"} style={{ marginBottom: "1rem" }}>
               <div className={"historyBox"}>
                 <span className={"ball red"}></span>
                 <span className={"textYear"}>2018</span>
-                <span className={"textDone"}>{t("history-text-4")}</span>
+                <span className={"textDone"}>{t("4")}</span>
               </div>
             </li>
             <li className={"li-3 left"}>
               <div className={"historyBox"}>
                 <span className={"ball red"}></span>
                 <span className={"textYear"}>2016</span>
-                <span className={"textDone"}>
-                  제10회 공개소프트웨어 개발자대회 금상
-                </span>
+                <span className={"textDone"}>{t("31")}</span>
               </div>
             </li>
             <li className={"li-3 right"}>
               <div className={"historyBox"}>
                 <span className={"ball red"}></span>
                 <span className={"textYear"}>2015</span>
-                <span className={"textDone"}>{t("history-text-3")}</span>
+                <span className={"textDone"}>{t("3")}</span>
               </div>
             </li>
             <li className={"li-3 left"}>
               <div className={"historyBox"}>
                 <span className={"ball blue"}></span>
                 <span className={"textYear"}>2014</span>
-                <span className={"textDone"}>슈퍼 개발자K3 우승</span>
+                <span className={"textDone"}>{t("21")}</span>
               </div>
             </li>
             <li className={"li-2 right"}>
               <div className={"historyBox"}>
                 <span className={"ball blue"}></span>
-                <span className={"textYear"}>2012.9</span>
-                <span className={"textDone"}>{t("history-text-2")}</span>
+                <span className={"textYear"}>2013</span>
+                <span className={"textDone"}>{t("2")}</span>
               </div>
             </li>
             <li className={"li-2 left"}>
               <div className={"historyBox"}>
                 <span className={"ball blue"}></span>
                 <span className={"textYear"}>2012</span>
-                <span className={"textDone"}>{t("history-text-1")}</span>
+                <span className={"textDone"}>{t("1")}</span>
               </div>
             </li>
           </ul>

@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { I18nProviderClient, useCurrentLocale } from "@/locales/client";
 import { Loading } from "@/components/common/Loading";
 import { ConfigProvider } from "antd";
-import {StoreSpinner} from "@/components/common/StoreSpinner";
+import { StoreSpinner } from "@/components/common/StoreSpinner";
 
 type ProviderProps = {
   children: ReactNode;
@@ -25,6 +25,11 @@ export function Providers({ children }: ProviderProps) {
       theme={{
         token: {
           colorPrimary: "#000",
+        },
+        components: {
+          Select: {
+            optionActiveBg: "#eee",
+          },
         },
       }}
     >
