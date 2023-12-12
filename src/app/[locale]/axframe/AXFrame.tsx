@@ -28,7 +28,7 @@ export function AXFrame({}: Props) {
             >
               <Col sm={24} md={12}>
                 <img
-                  src={"/images/axframe-img.jpg"}
+                  src={"/images/axframe-isometric.png"}
                   alt={"axframe-img.jpg"}
                   style={{ width: "100%", borderRadius: 10 }}
                 />
