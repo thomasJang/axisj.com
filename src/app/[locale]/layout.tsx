@@ -6,8 +6,50 @@ import { Footer } from "@/app/[locale]/Footer";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
-  title: "axisj.com",
+  metadataBase: new URL("https://axisj.com"),
+  title: {
+    template: "%s | axisj.com",
+    default: "axisj.com",
+  },
   description: "AXISJ Official Website",
+  openGraph: {
+    title: "AXISJ.com",
+    url: "https://axisj.com",
+    siteName: "AXISJ Official Website",
+    locale: "en",
+    type: "website",
+    images: [
+      {
+        url: `https://axisj.com/api/og?title=${encodeURIComponent(
+          "AXISJ Official Website"
+        )}`,
+        width: 1200,
+        height: 630,
+        alt: "AXISJ Official Website",
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  icons: {
+    shortcut: "https://axisj.com/favicons/favicon.ico",
+  },
+  alternates: {
+    canonical: `https://axisj.com`,
+    languages: {
+      "en-US": "/en",
+      "ko-KR": "/ko",
+    },
+    types: {
+      "application/rss+xml": "https://axisj.com/feed.xml",
+    },
+  },
 };
 
 interface Props {

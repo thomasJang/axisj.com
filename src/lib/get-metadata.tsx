@@ -49,10 +49,8 @@ export function getMetadata({
       {/* General */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Language" content="en" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@max_leiter" />
-      <meta property="og:site_name" content="Max Leiter's site" />
-      <meta name="apple-mobile-web-app-title" content="Max" />
+      <meta property="og:site_name" content="AXISJ Inc." />
+      <meta name="apple-mobile-web-app-title" content="AXISJ" />
       <meta name="author" content={author} />
       <meta property="og:type" content="website" />
       <meta charSet="utf-8" />
@@ -62,7 +60,7 @@ export function getMetadata({
       <link
         rel="alternate"
         type="application/rss+xml"
-        title="RSS Feed for maxleiter.com"
+        title="RSS Feed for axisj.com"
         href="/feed.xml"
       />
 

@@ -21,6 +21,9 @@ export const generateMetadata = async ({
     alternates: {
       canonical: `https://axisj.com/blog/${params.slug}`,
     },
+    openGraph: {
+      images: "/og-image.png",
+    },
   };
 };
 
