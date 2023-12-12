@@ -145,6 +145,8 @@ export function Header({}: Props) {
               <LangSelector size={"1.5rem"} />
             </div>
             <div className={"right show-xs"}>
+              <Link href={`/blog`}>{t("blog")}</Link>
+              <LangSelector size={"1.5rem"} />
               <IconMenu
                 size={"1.5rem"}
                 onClick={() => {
@@ -158,6 +160,7 @@ export function Header({}: Props) {
         <Drawer
           title="AXISJ.com"
           placement="right"
+          width={260}
           onClose={() => {
             setIsOpen(false);
           }}
@@ -168,27 +171,12 @@ export function Header({}: Props) {
               padding: 10,
             },
           }}
-          closeIcon={<ArrowRightOutlined />}
         >
           <MobileMenuWrap>
             <Menu
               mode="vertical"
               className={"mobile-menu"}
-              items={[
-                ...items,
-                {
-                  type: "group", // Must have
-                  label: t("group.lang"),
-                },
-                {
-                  label: `한국어`,
-                  key: "ko",
-                },
-                {
-                  label: `English`,
-                  key: "en",
-                },
-              ]}
+              items={[...items]}
               onClick={onClickMenu}
             />
           </MobileMenuWrap>
@@ -260,6 +248,9 @@ const Layer = styled.div`
       flex-direction: row;
       align-items: center;
       justify-content: center;
+      svg {
+        display: block;
+      }
       ${mediaMax.md} {
         padding: 0 1rem;
       }
@@ -271,6 +262,13 @@ const Layer = styled.div`
       flex-direction: row;
       align-items: center;
       justify-content: center;
+      gap: 1.2rem;
+      svg {
+        display: block;
+      }
+      a {
+        font-weight: 700;
+      }
       ${mediaMax.md} {
         padding: 0 1rem;
       }
