@@ -97,6 +97,7 @@ const Layer = styled.div`
   p {
     margin: 1rem 0;
     color: var(--txt-body);
-    font-size: 0.95rem;
+    line-height: 1.5;
+    font-size: 0.975rem;
   }
 `;

@@ -1,11 +1,9 @@
 import * as React from "react";
 import styled from "@emotion/styled";
-import { PageContainer } from "@/styles/Layouts";
-import { media } from "@/styles/media";
-import { LogoAXSymbol } from "@/components/common/LogoAXSymbol";
-import { useI18n } from "@/locales/client";
-import { SMixinFlexRow } from "@/styles/emotion";
-import { Col, Row } from "antd";
+import {PageContainer} from "@/styles/Layouts";
+import {LogoAXSymbol} from "@/components/common/LogoAXSymbol";
+import {useI18n} from "@/locales/client";
+import {Col, Row} from "antd";
 
 interface Props {}
 
@@ -102,8 +100,9 @@ const Layer = styled.div`
   h4 {
     font-size: 1rem;
     line-height: 1.75rem;
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 1rem;
+    font-family: var(--font-display);
   }
 
   .ciTitleBox {
@@ -148,8 +147,8 @@ const Layer = styled.div`
       }
     }
     .colorName {
-      font-size: 0.75rem;
-      line-height: 1rem;
+      font-size: 0.9rem;
+      line-height: 1.5;
       word-break: keep-all;
     }
     .palletBox {

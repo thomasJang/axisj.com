@@ -131,6 +131,7 @@ const Layer = styled.div`
     margin: 0;
     color: var(--white);
     font-size: 1.05rem;
+    line-height: 1.5;
   }
 `;
 
