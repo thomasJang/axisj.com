@@ -11,10 +11,10 @@
 }
 
 .previous, .next {
-  font-weight: 500;
   transition: color var(--transition);
   flex: 0 0 45%;
   color: var(--ax_space_blue);
+  font-weight: 700;
 }
 
 @media (min-width: 768px) {

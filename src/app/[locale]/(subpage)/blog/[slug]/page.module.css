@@ -43,7 +43,6 @@
 .article .body p {
   font-size: 1rem;
   margin: 1rem 0;
-  font-weight: 300;
 }
 .article .body img {
   max-width: 100%;
@@ -55,6 +54,7 @@
   font-size: 0.8rem;
   display: flex;
   gap: 0.5rem;
+  font-weight: 700;
 }
 
 .article a {

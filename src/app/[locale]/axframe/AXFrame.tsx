@@ -4,7 +4,7 @@ import { PageContainer } from "@/styles/Layouts";
 import { useScopedI18n } from "@/locales/client";
 import { Col, Row } from "antd";
 import { dangerouslySetInnerHTML } from "@/utils/string/dangerouslySetInnerHTML";
-import { SMixinFlexColumn } from "@/styles/emotion";
+import {SMixinFlexColumn, SMixinFlexRow} from "@/styles/emotion";
 import { mediaMax } from "@/styles/media";
 import Link from "next/link";
 
@@ -103,6 +103,7 @@ const Layer = styled.div`
 
   h2 {
     font-size: 2.5rem;
+    line-height: 1.2;
     font-weight: normal;
     margin-bottom: 3rem;
     color: var(--white);
@@ -126,39 +127,46 @@ const Layer = styled.div`
     margin: 0;
     color: var(--white);
     font-size: 1.05rem;
-    font-weight: 300;
   }
 `;
 
 const UseCaseWrap = styled.div`
-  display: grid;
-  gap: 32px;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  ${SMixinFlexColumn("stretch", "stretch")};
+  gap: 2rem;
 
-  ${mediaMax.md} {
-    gap: 16px;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  }
 `;
 const UseCase = styled.div`
+  ${SMixinFlexRow("stretch", "flex-start")};
   background: var(--white);
   border-radius: 10px;
   margin: 0 auto;
+  padding: 1.5rem;
+  gap: 1.5rem;
+
+
+  ${mediaMax.md} {
+    ${SMixinFlexColumn("stretch", "flex-start")};
+    padding: 0;
+    gap: 0.5rem;
+  }
+
   img {
-    width: 100%;
+    width: 300px;
     border-radius: 10px;
+    ${mediaMax.md} {
+      width: 100%;
+    }
   }
   .meta {
     ${SMixinFlexColumn("stretch", "stretch")};
     gap: 1rem;
-    padding: 1.5rem;
 
     ${mediaMax.md} {
       padding: 1rem;
     }
 
     .titles {
-      ${SMixinFlexColumn("flex-start", "center")};
+      ${SMixinFlexColumn("flex-start", "flex-start")};
       gap: 0.5rem;
       h5 {
         text-align: center;
@@ -167,8 +175,6 @@ const UseCase = styled.div`
     }
     p {
       color: var(--txt-body);
-      font-size: 1rem;
-      font-weight: 300;
     }
     [role="read"] {
       font-size: 14px;

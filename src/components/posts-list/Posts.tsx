@@ -109,7 +109,6 @@ const PostCard = styled.div`
   p {
     color: var(--txt-body);
     font-size: 0.9rem;
-    font-weight: 300;
   }
 
   [role="read"] {
