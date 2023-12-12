@@ -23,6 +23,7 @@
   color: var(--txt-body);
   font-family: var(--font-display);
   font-weight: 500;
+  line-height: 1.4;
 }
 .article .body {
   margin: 1rem 0;
@@ -40,6 +41,7 @@
   color: var(--txt-display);
   margin: 1.2em 0 1em 0;
   font-weight: 500;
+  line-height: 1.4;
 }
 .article .body p {
   font-size: 1rem;

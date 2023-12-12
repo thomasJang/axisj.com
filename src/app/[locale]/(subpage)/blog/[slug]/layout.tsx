@@ -23,6 +23,7 @@ export const generateMetadata = async ({
     },
     openGraph: {
       title: post?.title,
+      url: `https://axisj.com/blog/${params.slug}`,
       description: post?.description,
       siteName: "AXISJ Official Website",
       locale: "en",
