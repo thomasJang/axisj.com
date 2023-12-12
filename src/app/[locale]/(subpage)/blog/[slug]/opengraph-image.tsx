@@ -69,10 +69,10 @@ export default async function ({
           {date && (
             <div
               style={{
-                fontSize: 25,
+                fontSize: 18,
                 background: "white",
                 color: "black",
-                padding: "4px 10px",
+                padding: "4px",
               }}
             >
               {date}
@@ -89,14 +89,14 @@ export default async function ({
             padding: "0 50px",
             color: "white",
             textAlign: "center",
-            height: 630 - 50 - 50,
+            height: 315 - 50 - 50,
             maxWidth: 1000,
           }}
         >
           {title && (
             <div
               style={{
-                fontSize: 65,
+                fontSize: 30,
                 fontWeight: 900,
                 marginBottom: 40,
                 lineHeight: 1.1,
@@ -109,8 +109,8 @@ export default async function ({
       </div>
     ),
     {
-      width: 1200,
-      height: 630,
+      width: 600,
+      height: 315,
     }
   );
 }

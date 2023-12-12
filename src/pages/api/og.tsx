@@ -36,7 +36,7 @@ const handler = async (req: NextRequest) => {
             justifyContent: "space-between",
             alignItems: "flex-start",
             width: "100%",
-            padding: "10px 50px",
+            padding: "10px",
           }}
         >
           <span
@@ -73,7 +73,7 @@ const handler = async (req: NextRequest) => {
             padding: "0 50px",
             color: "white",
             textAlign: "center",
-            height: 630 - 50 - 50,
+            height: 315 - 50 - 50,
             maxWidth: 1000,
           }}
         >
@@ -100,8 +100,8 @@ const handler = async (req: NextRequest) => {
           weight: 500,
         },
       ],
-      width: 1200,
-      height: 630,
+      width: 600,
+      height: 315,
     }
   );
 };
