@@ -45,6 +45,9 @@
   font-size: 1rem;
   margin: 1rem 0;
 }
+.article .body b, .article .body strong {
+  color: var(--ax_space_blue);
+}
 .article .body img {
   max-width: 100%;
   margin: 1rem auto;
