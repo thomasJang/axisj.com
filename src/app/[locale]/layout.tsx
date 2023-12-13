@@ -4,6 +4,7 @@ import { Header } from "@/app/[locale]/Header";
 import { Providers } from "@/app/[locale]/providers";
 import { Footer } from "@/app/[locale]/Footer";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://axisj.com"),
@@ -64,6 +65,7 @@ export default function RootLayout({ children }: Props) {
           <Footer />
         </Providers>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
