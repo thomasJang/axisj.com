@@ -50,12 +50,14 @@ export function AboutAXISJ({}: Props) {
         <Container>
           <blockquote>
             AXISJ is an innovative technology company created by passionate and
-            creative programmers. We take pride in leading the way in the latest
-            technology trends and developing inventive and effective solutions
-            across various domains. Currently, we are actively researching and
-            developing the AXFrame framework for diverse solution development.
-            Building upon AXFrame, we are creating a range of innovative
-            solutions to address various challenges.
+            creative programmers.
+            <br />
+            We take pride in leading the way in the latest technology trends and
+            developing inventive and effective solutions across various domains.
+            Currently, we are actively researching and developing the AXFrame
+            framework for diverse solution development. Building upon AXFrame,
+            we are creating a range of innovative solutions to address various
+            challenges.
           </blockquote>
           <h5>AXFrame</h5>
           <p>
