@@ -54,6 +54,12 @@
   max-width: 100%;
   margin: 1rem auto;
 }
+.article blockquote {
+  padding: 0 1em;
+  border-left: 0.25em solid var(--txt-body);
+}
+
+
 .article .back {
   margin-bottom: 3rem;
   color: var(--ax_space_blue);
