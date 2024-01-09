@@ -63,7 +63,7 @@ export default Posts;
 const PostWrap = styled.div`
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 
   ${mediaMax.md} {
     gap: 16px;
@@ -96,6 +96,7 @@ const PostCard = styled.div`
     [role="date"] {
       font-size: 0.8rem;
       color: var(---txt-body);
+      margin-bottom: 0.3rem;
     }
     [role="title"] {
       font-size: 1.2rem;
