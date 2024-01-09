@@ -8,6 +8,7 @@ const Email = async () => {
         padding: 100,
       }}
     >
+      <p>----------- 복사시작</p>
       <div
         style={{
           border: "3px solid #000",
@@ -33,6 +34,8 @@ const Email = async () => {
           010-8881-9137, tom@axisj.com
         </p>
       </div>
+
+      <p>----------- 복사끝</p>
     </div>
   );
 };
