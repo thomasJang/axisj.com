@@ -30,10 +30,10 @@ export const generateMetadata = async ({
       type: "website",
       images: [
         {
-          url: `https://axisj.com/images/og-image.jpg`,
+          url: post?.ogImage ?? `https://axisj.com/images/og-image.jpg`,
           width: 800,
           height: 400,
-          alt: "AXISJ Official Website",
+          alt: post?.title,
         },
       ],
     },

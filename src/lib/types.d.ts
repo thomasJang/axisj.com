@@ -12,6 +12,7 @@ export type Post = {
   // Third party only
   isThirdParty?: boolean;
   href?: string;
+  ogImage?: string;
 };
 
 export type Project = {
