@@ -1,0 +1,39 @@
+{
+  "router": {
+    "axisj": "AXISJ",
+    "notice": "Notice",
+    "service": "Service",
+    "solution": "AXFrame",
+    "design": "Design",
+    "contact": "Contact Us",
+    "group": {
+        "lang": "Select Language"
+    },
+    "blog": {
+        "title": "AXISJ Blog"
+    }
+  },
+
+  "pages": {
+    "index": {
+      "title": "The AXISJ.com",
+      "@metadata": {
+        "title": "The AXISJ.com",
+        "description": "액시스제이는 IT 솔루션 개발 및 IT 서비스를 제공하는 기업입니다. 액시스제이는 고객의 비즈니스 성과를 높이고 지속적인 성장을 촉진합니다."
+      }
+    },
+    "contact": {
+      "tit": "Contact Us",
+      "address": "Address",
+      "zipcode": "Zipcode",
+      "tel": "Tel.",
+      "email": "E-Mail",
+      "naver-map": "Naver Map",
+      "daum-map": "Daum Map",
+      "@metadata": {
+        "title": "Contact Us",
+        "description": ""
+      }
+    }
+  }
+}
