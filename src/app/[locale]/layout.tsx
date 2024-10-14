@@ -1,9 +1,11 @@
 import { Header } from "@/components/server/layouts/Header";
+import { LangType } from "@/i18n/routing";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { ReactNode } from "react";
 import "@/styles/globals.scss";
+import "./Layout.scss";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://axisj.com"),
@@ -55,7 +57,7 @@ export default async function RootLayout({
   params: { locale },
 }: Readonly<{
   children: ReactNode;
-  params: { locale: string };
+  params: { locale: LangType };
 }>) {
   const messages = await getMessages();
 

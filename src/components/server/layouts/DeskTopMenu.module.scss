@@ -1,0 +1,14 @@
+@import "@/styles/inc/mixins";
+
+.menuList {
+  display: flex;
+  gap: 32px;
+
+  @include mobile {
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

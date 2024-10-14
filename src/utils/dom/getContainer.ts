@@ -1,5 +1,5 @@
 interface Props {}
 
-export function getLayoutHeader() {
+export function getLayoutHeaderEl() {
   return document.getElementById("layout-header");
 }

@@ -1,45 +1,25 @@
+import LangSelector from "@/components/client/LangSelector";
 import { OnScrollHeader } from "@/components/client/OnScrollHeader";
 import { LogoAXSymbol } from "@/components/server/common/LogoAXSymbol";
+import { Container } from "@/components/server/layouts/Container";
+import { DeskTopMenu } from "@/components/server/layouts/DeskTopMenu";
+import { LangType } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import * as React from "react";
-import "@/styles/Layout.scss";
 
 interface Props {
-  locale: string;
+  locale: LangType;
 }
 
 export function Header({ locale }: Props) {
   const t = useTranslations();
 
-  const items = [
-    {
-      key: "axisj",
-      label: t("router.axisj"),
-    },
-    {
-      key: "service",
-      label: t("router.service"),
-    },
-    {
-      key: "solution",
-      label: t("router.solution"),
-    },
-    {
-      key: "contact",
-      label: t("router.contact"),
-    },
-    {
-      key: "blog",
-      label: t("router.blog.title"),
-    },
-  ];
-
   return (
     <div id={"layout-header"} className={"header"}>
       <OnScrollHeader />
 
-      <div className={"container"}>
+      <Container>
         <div className={"gnbWrapper"}>
           <div className={"left"}>
             <Link href={`/${locale}#HOME`}>
@@ -47,12 +27,14 @@ export function Header({ locale }: Props) {
             </Link>
           </div>
           <div className={"center"}>
-            {/*<Menu mode='horizontal' selectedKeys={[]} items={items} onClick={onClickMenu} />*/}
+            <DeskTopMenu />
           </div>
-          <div className={`center showSm`}>{/*<LangSelector size={"1.5rem"} />*/}</div>
-          <div className={`center showXs`}>
+          <div className={`right showSm`}>
+            <LangSelector size={20} locale={locale} />
+          </div>
+          <div className={`right showXs`}>
             <Link href={`/blog`}>{t("router.blog.title")}</Link>
-            {/*<LangSelector size={"1.5rem"} />*/}
+            <LangSelector size={20} locale={locale} />
             {/*<IconMenu*/}
             {/*  size={"1.5rem"}*/}
             {/*  onClick={() => {*/}
@@ -61,7 +43,7 @@ export function Header({ locale }: Props) {
             {/*/>*/}
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 }

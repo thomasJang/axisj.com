@@ -1,8 +1,7 @@
 "use client";
 
-import { getLayoutHeader } from "@/utils/dom/getContainer";
+import { getLayoutHeaderEl } from "@/utils/dom/getContainer";
 import { useCallback, useEffect, useState } from "react";
-import styles from "./OnScrollHeader.module.scss";
 
 interface Props {}
 export function OnScrollHeader({}: Props) {
@@ -11,10 +10,10 @@ export function OnScrollHeader({}: Props) {
 
   const handleScroll = useCallback(() => {
     const visualHeight = 300;
-    const headerWarpHeight = getLayoutHeader()?.clientHeight ?? 0;
+    const headerWarpHeight = getLayoutHeaderEl()?.clientHeight ?? 0;
 
     const heightGap = visualHeight - headerWarpHeight;
-    console.debug("visualHeight", heightGap, window.scrollY);
+    console.debug("visualHeight", visualHeight, headerWarpHeight, window.scrollY);
     setScroll(window.scrollY > heightGap);
     setScrollPercent((window.scrollY / (window.document.body.clientHeight - window.innerHeight)) * 100);
   }, []);
@@ -30,15 +29,30 @@ export function OnScrollHeader({}: Props) {
 
   useEffect(() => {
     if (scroll) {
-      getLayoutHeader()?.classList.add("scroll");
+      getLayoutHeaderEl()?.classList.add("scroll");
     } else {
-      getLayoutHeader()?.classList.remove("scroll");
+      getLayoutHeaderEl()?.classList.remove("scroll");
     }
   }, [scroll]);
 
   return (
-    <div className={styles.container}>
-      <div className={styles.bar} style={{ width: `${scrollPercent}%` }} />
+    <div>
+      <div className={"bar"} style={{ width: `${scrollPercent}%` }} />
+
+      <style jsx>{`
+        div {
+          position: fixed;
+          left: 0;
+          top: 0;
+          width: 100%;
+
+          .bar {
+            transition: all 0.2s ease-in;
+            height: 3px;
+            background: var(--ax_space_blue);
+          }
+        }
+      `}</style>
     </div>
   );
 }
