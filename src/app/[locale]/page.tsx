@@ -1,5 +1,11 @@
 import { PageParams } from "@/app/@types";
+import { AboutAXISJ } from "@/components/server/aboutAXISJ/AboutAXISJ";
+import { History } from "@/components/server/aboutAXISJ/History";
+import { Symbol } from "@/components/server/aboutAXISJ/Symbol";
 import { MainVisual } from "@/components/client/mainVisual/MainVisual";
+import { AXFrame } from "@/components/server/axframe/AXFrame";
+import { Contact } from "@/components/server/contact/Contact";
+import { Service } from "@/components/server/service/Service";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { Suspense } from "react";
@@ -11,9 +17,24 @@ export default function HomePage({}: any) {
 
   return (
     <main>
-      <Suspense fallback={<div>Loading...</div>}>
+      <a id={"HOME"} className={"anchorPoint home"} />
+      <Suspense>
         <MainVisual />
       </Suspense>
+
+      <div id={"index-content-wrapper"} className={"index-content-wrapper"}>
+        <a id={"AXISJ"} className={"anchorPoint"} />
+        <AboutAXISJ />
+        <History />
+        <Symbol />
+
+        <a id={"SERVICE"} className={"anchorPoint"} />
+        <Service />
+        <a id={"AXFRAME"} className={"anchorPoint"} />
+        <AXFrame />
+        <a id={"CONTACT"} className={"anchorPoint"} />
+        <Contact />
+      </div>
     </main>
   );
 }

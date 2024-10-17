@@ -32,6 +32,33 @@
         "description": "액시스제이는 IT 솔루션 개발 및 IT 서비스를 제공하는 기업입니다. 액시스제이는 고객의 비즈니스 성과를 높이고 지속적인 성장을 촉진합니다."
       }
     },
+    "history": {
+      "title": "History",
+      "1": "Launched ModsAX Framework",
+      "2": "Open source AXISJ launch",
+      "21": "Super Developer K3 Wins",
+      "3": "AXBoot launch",
+      "31": "Gold Award at the 10th Open Software Developer Conference",
+      "4": "End of open source update",
+      "5": "Established AXISJ corporation",
+      "6": "AXFrame Beta Launch",
+      "7": "Renamed AXFrame to AXBoot."
+    },
+    "symbol": {
+      "title-ci": "CI",
+      "ci-desc":
+      "A point is a world. We all have our own universe. The steps that took one step forward in the world of IT became a trajectory. Today, we present an amazing experience to you starting with 'Hello World'. We start with infinite possibilities.",
+      "title-color-primary": "Primary Colors",
+      "color-primary-1": "Supernova Red",
+      "color-primary-2": "Space Blue",
+      "color-primary-3": "Deep Black",
+      "title-color-wild": "Wildcard Colors",
+      "color-wild-1": "Desert Yellow",
+      "color-wild-2": "Leaf Green",
+      "color-wild-3": "Sandy Brown",
+      "color-wild-4": "Sky Blue"
+    },
+
     "contact": {
       "tit": "Contact Us",
       "address": "Address",
@@ -39,11 +66,7 @@
       "tel": "Tel.",
       "email": "E-Mail",
       "naver-map": "Naver Map",
-      "daum-map": "Daum Map",
-      "@metadata": {
-        "title": "Contact Us",
-        "description": ""
-      }
+      "daum-map": "Daum Map"
     }
   }
 }

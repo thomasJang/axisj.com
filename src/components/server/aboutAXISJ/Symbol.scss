@@ -1,0 +1,76 @@
+@import "../../../styles/inc/breakpoints";
+
+.symbol-section {
+  border-top: 1px solid var(--border-color);
+  padding: 5rem 2rem;
+
+  h3 {
+    font-size: 2rem;
+    line-height: 1.75rem;
+    margin-bottom: 1.5rem;
+    font-weight: normal;
+  }
+  h4 {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-family: var(--font-display);
+  }
+
+  .ciTitleBox {
+    p {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      word-break: keep-all;
+      color: var(--txt-body);
+      font-family: var(--font-display);
+    }
+  }
+  .colorBox {
+    //dl...
+    margin-top: 2rem;
+    .colorPallet {
+      flex: 0 0 auto;
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 100rem;
+
+      &.ax_supernova_red {
+        background-color: var(--ax_supernova_red);
+      }
+      &.ax_space_blue {
+        background-color: var(--ax_space_blue);
+      }
+      &.ax_deep_black {
+        background-color: var(--ax_deep_black);
+      }
+      &.ax_desert_yellow {
+        background-color: var(--ax_desert_yellow);
+      }
+      &.ax_leaf_green {
+        background-color: var(--ax_leaf_green);
+      }
+      &.ax_sandy_brown {
+        background-color: var(--ax_sandy_brown);
+      }
+      &.ax_skyblue {
+        background-color: var(--ax_skyblue);
+      }
+    }
+    .colorName {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      word-break: keep-all;
+    }
+    .palletBox {
+      padding: 0.3rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 1rem;
+      //flex-wrap:no-wrap
+    }
+  }
+}

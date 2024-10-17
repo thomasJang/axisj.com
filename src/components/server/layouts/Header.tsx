@@ -1,4 +1,5 @@
 import LangSelector from "@/components/client/LangSelector";
+import { MobileMenu } from "@/components/client/MobileMenu";
 import { OnScrollHeader } from "@/components/client/OnScrollHeader";
 import { LogoAXSymbol } from "@/components/server/common/LogoAXSymbol";
 import { Container } from "@/components/server/layouts/Container";
@@ -34,12 +35,8 @@ export function Header({ locale }: Props) {
               {t("router.blog.title")}
             </Link>
             <LangSelector size={20} locale={locale} />
-            {/*<IconMenu*/}
-            {/*  size={"1.5rem"}*/}
-            {/*  onClick={() => {*/}
-            {/*    setIsOpen(true);*/}
-            {/*  }}*/}
-            {/*/>*/}
+
+            <MobileMenu />
           </div>
         </div>
       </Container>

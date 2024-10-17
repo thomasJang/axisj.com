@@ -1,6 +1,7 @@
 "use client";
 import { useContainerSize } from "@/hooks/useContainerSize";
 import { useAppStore } from "@/store/useAppStore";
+import { getIndexContentEl } from "@/utils/dom/getContainer";
 import styled from "@emotion/styled";
 import { useTranslations } from "next-intl";
 import * as React from "react";
@@ -69,7 +70,14 @@ export function MainVisual({}: Props) {
   }, [seconds, heroTitle, heroDesc, titleShow, t]);
 
   useEffect(() => {
+    // console.debug("containerHeight", containerHeight);
+
     setVisualHeight(containerHeight);
+
+    const indexContentEl = getIndexContentEl();
+    if (indexContentEl) {
+      indexContentEl.style.marginTop = `${containerHeight}px`;
+    }
   }, [containerHeight, setVisualHeight]);
 
   return (
@@ -107,16 +115,10 @@ const Div = styled.div`
     left:0;
     top:0;
     z-index: 1;
-    background-position: center;
     background:#eaeaea url('/video/ax-hero.jpg') no-repeat top left;
     background-size:cover;
     overflow: hidden;
 
-    padding-bottom: 5.5rem;
-    ${mediaMax.md} {
-      padding-bottom: 3rem;
-    }
-    
     video{
       display: block;
       min-width:100%;

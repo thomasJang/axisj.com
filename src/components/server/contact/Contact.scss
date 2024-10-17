@@ -1,0 +1,50 @@
+@import "../../../styles/inc/breakpoints";
+
+.contact-section {
+  background: var(--line-gr);
+  border-top: 1px solid var(--border-color);
+
+  padding: 5rem 2rem;
+
+  @include mdMax {
+    padding: 3rem 1rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-family: var(--font-display);
+  }
+
+  .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  dl {
+  }
+  dt {
+    font-weight: 700;
+    margin-top: 1rem;
+    font-family: var(--font-display);
+  }
+  dd {
+    padding: 0.5rem 0;
+    p {
+      font-size: 1.1rem;
+      line-height: 1.4rem;
+      color: var(--txt-body);
+      margin-bottom: 0.5rem;
+    }
+  }
+  .buttonWrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+}

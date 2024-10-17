@@ -1,0 +1,27 @@
+@import "../../../styles/inc/breakpoints";
+
+.section {
+  padding: 60px 0;
+  color: var(--txt-body);
+
+  line-height: 1.5;
+
+  p {
+    margin: 1em 0;
+  }
+
+  h5 {
+    color: var(--txt-display);
+    font-family: var(--font-display);
+  }
+
+  blockquote {
+    margin: 0 0 1em;
+    color: var(--txt-display);
+    font-family: var(--font-display);
+  }
+
+  @include md{
+    padding: 3rem 2rem;
+  }
+}

@@ -32,6 +32,32 @@
         "description": "액시스제이는 IT 솔루션 개발 및 IT 서비스를 제공하는 기업입니다. 액시스제이는 고객의 비즈니스 성과를 높이고 지속적인 성장을 촉진합니다."
       }
     },
+    "history": {
+      "title": "History",
+      "1": "액스모즈(ModsAX)",
+      "2": "오픈소스 액시스제이 런칭",
+      "21": "슈퍼 개발자K3 우승",
+      "3": "AXBoot launch",
+      "31": "제10회 공개소프트웨어 개발자대회 금상",
+      "4": "AXISJ 오픈소스 업데이트 종료",
+      "5": "액시스제이 법인설립",
+      "6": "액스프레임 베타 런칭",
+      "7": "액스프레임, 액스부트로 명칭 변경"
+    },
+    "symbol": {
+      "title-ci": "로고",
+      "ci-desc":
+      "점은 하나의 세계입니다. 우리는 모두 각자의 우주를 가지고 있습니다. IT라는 세상을 한걸음 한걸음 나아간 발걸음은 하나의 궤적이 되었습니다. 오늘도 '헬로우 월드'로 시작하는 당신께 놀라운 경험을 선물합니다. 우리는 무한한 가능성을 가진 점에서 시작합니다.",
+      "title-color-primary": "Primary Colors",
+      "color-primary-1": "수퍼노바 레드 Supernova Red",
+      "color-primary-2": "스페이스 블루 Space Blue",
+      "color-primary-3": "딥 블랙 Deep Black",
+      "title-color-wild": "Wildcard Colors",
+      "color-wild-1": "데저트 옐로우 : Desert Yellow",
+      "color-wild-2": "리프 그린 : Leaf Green",
+      "color-wild-3": "샌디 브라운 : Sandy Brown",
+      "color-wild-4": "스카이 블루 : Sky Blue"
+    },
     "contact": {
       "tit": "오시는 길",
       "address": "주소",
@@ -39,11 +65,7 @@
       "tel": "전화번호",
       "email": "이메일 주소",
       "naver-map": "Naver 지도",
-      "daum-map": "Daum 지도",
-      "@metadata": {
-        "title": "오시는 길",
-        "description": ""
-      }
+      "daum-map": "Daum 지도"
     }
   }
 }

@@ -1,0 +1,56 @@
+@import "../../../styles/inc/breakpoints";
+
+.service-section {
+  background-image: url("/images/bg-service.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 5rem 2rem;
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-bottom: 3rem;
+  }
+
+  .titIcon {
+    font-size: 4rem;
+    padding-bottom: 1rem;
+
+    &.ti1 {
+      [stroke="#E0D0A6"] {
+        stroke: var(--ax_supernova_red);
+        stroke-width: 5px;
+      }
+    }
+    &.ti2 {
+      [stroke="#E0D0A6"] {
+        stroke: #324b7b;
+        stroke-width: 5px;
+      }
+      [fill="#E0D0A6"] {
+        fill: #324b7b;
+      }
+    }
+    &.ti3 {
+      [stroke="#E0D0A6"] {
+        stroke: var(--ax_supernova_red);
+        stroke-width: 5px;
+      }
+    }
+  }
+
+  .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: var(--font-display);
+  }
+
+  p {
+    margin: 1rem 0;
+    color: var(--txt-body);
+    line-height: 1.5;
+    font-size: 0.975rem;
+  }
+}
