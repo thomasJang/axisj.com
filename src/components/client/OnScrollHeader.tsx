@@ -1,5 +1,6 @@
 "use client";
 
+import { useAppStore } from "@/store/useAppStore";
 import { getLayoutHeaderEl } from "@/utils/dom/getContainer";
 import { useCallback, useEffect, useState } from "react";
 
@@ -7,16 +8,15 @@ interface Props {}
 export function OnScrollHeader({}: Props) {
   const [scroll, setScroll] = useState(false);
   const [scrollPercent, setScrollPercent] = useState(0);
+  const visualHeight = useAppStore((state) => state.visualHeight);
 
   const handleScroll = useCallback(() => {
-    const visualHeight = 300;
     const headerWarpHeight = getLayoutHeaderEl()?.clientHeight ?? 0;
-
     const heightGap = visualHeight - headerWarpHeight;
-    console.debug("visualHeight", visualHeight, headerWarpHeight, window.scrollY);
+
     setScroll(window.scrollY > heightGap);
     setScrollPercent((window.scrollY / (window.document.body.clientHeight - window.innerHeight)) * 100);
-  }, []);
+  }, [visualHeight]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });

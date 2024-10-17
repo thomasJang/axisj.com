@@ -16,7 +16,7 @@ export function Header({ locale }: Props) {
   const t = useTranslations();
 
   return (
-    <div id={"layout-header"} className={"header"}>
+    <nav id={"layout-header"} className={"header"}>
       <OnScrollHeader />
 
       <Container>
@@ -29,11 +29,10 @@ export function Header({ locale }: Props) {
           <div className={"center"}>
             <DeskTopMenu />
           </div>
-          <div className={`right showSm`}>
-            <LangSelector size={20} locale={locale} />
-          </div>
-          <div className={`right showXs`}>
-            <Link href={`/blog`}>{t("router.blog.title")}</Link>
+          <div className={`right`}>
+            <Link href={`/blog`} className={"hideLg"}>
+              {t("router.blog.title")}
+            </Link>
             <LangSelector size={20} locale={locale} />
             {/*<IconMenu*/}
             {/*  size={"1.5rem"}*/}
@@ -44,6 +43,6 @@ export function Header({ locale }: Props) {
           </div>
         </div>
       </Container>
-    </div>
+    </nav>
   );
 }

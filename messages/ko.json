@@ -17,6 +17,16 @@
   "pages": {
     "index": {
       "title": "액시스제이",
+      "hero-title-1": "Pioneering a dot",
+      "hero-title-p-1": "시작은 작은 꿈에서 시작하고...",
+      "hero-title-2": "Connecting the dots",
+      "hero-title-p-2":
+      "현재의 점들이 미래로 연결된다는 믿음이 우리의 가슴을 뛰게 만들며...",
+      "hero-title-3": "We are a dot",
+      "hero-title-p-3":
+      "세상의 모든 가치가 연결되는 순간,우리는 놀라운 경험을 얻게 됩니다.",
+      "hero-title-4": "A dot is a world",
+      "hero-title-p-4": "점 하나의 세상. 액시스제이",
       "@metadata": {
         "title": "액시스제이 메타데이터",
         "description": "액시스제이는 IT 솔루션 개발 및 IT 서비스를 제공하는 기업입니다. 액시스제이는 고객의 비즈니스 성과를 높이고 지속적인 성장을 촉진합니다."

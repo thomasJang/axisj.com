@@ -1,14 +1,17 @@
-@import "@/styles/inc/mixins";
+@import "@/styles/inc/breakpoints";
 
 .menuList {
-  display: flex;
+  font-family: var(--font);
+  display: none;
   gap: 32px;
 
-  @include mobile {
-    display: none;
+  @include lg {
+    display: flex;
   }
 
   a {
     text-decoration: none;
+    color: var(--ax_deep_black);
+    font-size: 1rem;
   }
 }
