@@ -55,6 +55,12 @@
     background: var(--white);
     border-radius: 10px;
 
+    @include mdMax {
+      flex-direction: column;
+      padding: 0;
+      gap: 0.5rem;
+    }
+
     img {
       width: 300px;
       border-radius: 10px;
