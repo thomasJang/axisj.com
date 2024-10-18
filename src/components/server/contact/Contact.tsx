@@ -8,7 +8,7 @@ import "./Contact.scss";
 interface Props {}
 
 export function Contact({}: Props) {
-  const t = useTranslations("contact");
+  const t = useTranslations("pages.contact");
 
   return (
     <div className={"contact-section"}>

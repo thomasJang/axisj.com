@@ -30,7 +30,7 @@ export function DeskTopMenu({}: Props) {
     },
     {
       pathname: "/blog",
-      label: t("router.blog.title"),
+      label: t("router.blog.label"),
     },
   ];
 

@@ -109,6 +109,12 @@
     font-size: 1rem;
   }
 }
+.header-dummy {
+  height: 5.5rem;
+  @include mdMax {
+    height: 3rem;
+  }
+}
 
 .footer {
   font-size: 0.875rem;
@@ -188,5 +194,5 @@
   position: relative;
   z-index: 3;
   background: var(--white);
-  margin-top: 548px;
+  //margin-top: 548px;
 }

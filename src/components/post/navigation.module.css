@@ -1,0 +1,43 @@
+.divider {
+  margin: 0 0 1.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navigation {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.previous, .next {
+  transition: color var(--transition);
+  flex: 0 0 45%;
+  color: var(--ax_space_blue);
+  font-weight: 700;
+  font-family: var(--font-display);
+}
+
+@media (min-width: 768px) {
+  .previous {
+    text-align: left;
+  }
+  .next {
+    text-align: right;
+  }
+}
+
+
+.next {
+  text-align: right;
+}
+
+.title {
+  font-weight: normal;
+  line-height: 3rem;
+}
+
+.previous:hover, .next:hover,
+.previous:focus, .next:focus {
+  color: var(--txt-link-hover);
+}

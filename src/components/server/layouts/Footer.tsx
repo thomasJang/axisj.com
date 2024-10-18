@@ -2,7 +2,7 @@ import { IconGithub } from "@/components/client/common/IconGithub";
 import { IconInstagram } from "@/components/client/common/IconInstagram";
 import { Col, Divider, Row } from "antd";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import * as React from "react";
 
 interface Props {}

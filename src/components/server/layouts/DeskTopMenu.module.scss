@@ -10,8 +10,17 @@
   }
 
   a {
+    transition: all 0.3s;
     text-decoration: none;
     color: var(--ax_deep_black);
     font-size: 1rem;
+    display: block;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    padding: 5px 0;
+
+    &:hover {
+      border-bottom: 2px solid var(--ax_deep_black);
+    }
   }
 }

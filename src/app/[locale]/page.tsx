@@ -23,16 +23,15 @@ export default function HomePage({}: any) {
       </Suspense>
 
       <div id={"index-content-wrapper"} className={"index-content-wrapper"}>
-        <a id={"AXISJ"} className={"anchorPoint"} />
+        <a id={"axisj"} className={"anchorPoint"} />
         <AboutAXISJ />
         <History />
         <Symbol />
-
-        <a id={"SERVICE"} className={"anchorPoint"} />
+        <a id={"service"} className={"anchorPoint"} />
         <Service />
-        <a id={"AXFRAME"} className={"anchorPoint"} />
+        <a id={"axframe"} className={"anchorPoint"} />
         <AXFrame />
-        <a id={"CONTACT"} className={"anchorPoint"} />
+        <a id={"contact"} className={"anchorPoint"} />
         <Contact />
       </div>
     </main>

@@ -119,7 +119,12 @@ const Div = styled.div`
     background-size:cover;
     overflow: hidden;
 
-    video{
+    padding-bottom: 5.5rem;
+    ${mediaMax.md} {
+        padding-bottom: 3rem;
+    }
+
+      video{
       display: block;
       min-width:100%;
       min-height:100%;

@@ -1,14 +1,14 @@
 import { dangerouslySetInnerHTML } from "@/utils/string/dangerouslySetInnerHTML";
 import { Col, Row } from "antd";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import * as React from "react";
 import "./AXFrame.scss";
 
 interface Props {}
 
 export function AXFrame({}: Props) {
-  const t = useTranslations("axframe");
+  const t = useTranslations("pages.axframe");
 
   return (
     <div className={"axframe-section"}>
@@ -33,7 +33,7 @@ export function AXFrame({}: Props) {
           </Col>
         </Row>
 
-        <h3>{t("use-case")}</h3>
+        <h3>{t("use-case.title")}</h3>
         <div className={"useCaseWrap"}>
           <div className={"useCase"}>
             <img src={"/images/gms.jpg"} alt={"We"} />

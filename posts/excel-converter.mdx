@@ -1,0 +1,106 @@
+---
+title: EXCEL CONVERTER
+subtitle: AXFrame EXCEL CONVERTER(엑셀 컨버터)를 소개합니다.
+writer : Tom
+description: 웹 어플리케이션을 만들다 보면 항상 엑셀을 다루어야 하는 상황을 만나게 됩니다. 아마도 많은 개발자 분들이나 업계 종사자 분들은 공감할 것 같습니다. 하지만 엑셀의 내용은 높은 자유도 때문에 컬럼과 어플리케이션 도메인에서 원하는 타겟을 맵핑하는 일은 항상 우리를 힘들게 합니다. '개발자에겐 당연한 오류라고 생각 할 수 있지만 사용자에겐 당황스러울 수 있습니다.'
+slug: excel-converter
+date: 2024-01-09 21:38:00
+ogImage: /post/excel-converter/excel-converter-03.png
+---
+
+웹 어플리케이션을 만들다 보면 항상 엑셀을 다루어야 하는 상황을 만나게 됩니다. 아마도 많은 개발자 분들이나 업계 종사자 분들은 공감할 것 같습니다.
+하지만 엑셀의 내용은 높은 자유도 때문에 컬럼과 어플리케이션 도메인에서 원하는 타겟을 맵핑하는 일은 항상 우리를 힘들게 합니다.
+
+![엑셀컨버팅에러](/post/excel-converter/excel-converter-01.png?w=1000)
+
+> 개발자에겐 당연한 오류라고 생각 할 수 있지만 사용자에겐 당황스러울 수 있습니다.
+
+## 컬럼 타입
+엑셀파일에서 컬럼은 값은 숫자, 문자, 날짜 형식으로 크게 나눌수 있는데. 우리 자바형님 께서는 너그럽게 알아서 잘 처리 해주시는 분이 아닙니다.
+그런 이유로 사용자가 시스템에 엑셀을 업로드 하려고 할 때 빈번하게 엑셀이 올바르지 않다는 에러메세지를 내뱉게 됩니다.
+
+## 컬럼 맵핑
+시스템에서 원하는 컬럼의 갯수와 종류가 10개 인데 엑셀파일이 필요한 정보를 모두 가지고 있는지 사용자에게 안내하고 그대로 사용하길 기대하는 일은 상당한 노력이 필요합니다.
+사용자가 편집한 엑셀 파일에 불필요한 컬럼이 추가 되어 있거나. 혹은 컬럼의 순서가 시스템이 요구하는 것과 맞지 않다면 사용자는 시스템에 엑셀파일을 업로드 해보고 실패 했을 때 시스템의 버그라고 생각하게 되는 경우가 있게 됩니다.
+
+개발자 입장에서도 사용자가 업로드 한 엑셀파일에 어떤 컬럼과 어떤 값이 문제가 되는지 친절하게 안내할 수 있도록 프로그램을 작성해야 하는데 이 또한 간단치 않은 일이고
+대게의 프로젝트에서 엑셀 업로드 기능은 프로젝트 막바지에 구현하는 경우가 많아 개발자가 프로젝트 초기보다는 후반부에 쌓인 높은 피로도 때문에 제대로된 프로그램을 작성하기 어려운 경우가 많습니다.
+
+# AXFrame EXCEL CONVERTER
+
+AXFrame EXCEL CONVERTER(엑셀 컨버터)는 파일업로드, 컬럼매핑, 데이터 미리보기, 확인(데이터 저장)의 4단계로 구성됩니다.
+첫번째 단계인 파일 업로드 과정에서는 사용자가 업로드할 엑셀 파일을 선택 할 수 있게 유도하고 필요한 경우 해당 프로그램에서 필요로 하는 샘플 엑셀 파일을 제공합니다.
+
+![엑셀컨버팅-Step1](/post/excel-converter/excel-converter-02.png?w=623)
+
+또한 엑셀컨버팅 모달을 초기화 하는 과정에서 필요로 하는 컬럼 정보와 데이터 미리보기 후에 API로 데이터를 전송하는 함수를 생성하여 주입시켜 줄 수 있도록 설계 되어 있습니다.
+다음은 엑셀컨버팅 모달을 초기화 하는 과정에서 필요로 하는 컬럼 정보와 데이터 미리보기 후에 API로 데이터를 전송하는 함수를 생성하여 주입시켜 주는 예제입니다.
+
+```typescript
+useDidMountEffect(() => {
+    init(
+      {
+        onModalOk: onOk,
+        onModalCancel: onCancel,
+        onSave: handleSave, // 저장 버튼 클릭시 호출되는 함수
+      },
+      params.segmentId,
+      t.pages.tmInfo.columns as TargetColumn[], // 대상컬럼 정보
+    );
+});
+````
+
+두번째 단계인 컬럼 매핑 과정에서는 사용자가 업로드한 엑셀 파일의 컬럼과 시스템에서 요구하는 컬럼을 매핑 할 수 있도록 유도합니다.
+
+![엑셀컨버팅-Step2](/post/excel-converter/excel-converter-03.png?w=1000)
+
+이 과정에서 미리 주입된 컬럼값의 이름과 엑셀의 첫번째줄의 값을 비교하여 자동으로 매치하여 주어 사용자의 편리한 사용을 도와주고 필요한 경우 사용자가 직접 매핑할 수 있습니다.
+또한 여러개의 엑셀컬럼을 하나의 컬럼에 Array나 Object 형태로 매핑할 수 있도록 컬럼 선언시에 선택 할 수 있습니다.
+다음은 컬럼 선언문의 예제입니다.
+
+```typescript
+export interface TargetColumn {
+  key: string;
+  label: string;
+  type: "string" | "number" | "date" | "keyValue";
+  required?: boolean;
+}
+
+const columns: TargetColumn[] = [
+    { key: "prdtLic", label: "보유라이선스 (멀티선택)", type: "keyValue" }, // 멀티선택 타입
+    { key: "custNm", label: "한글업체명", type: "string", required: true },
+    { key: "bizNum", label: "사업자번호", type: "string", required: true },
+    { key: "phone", label: "전화번호", type: "string" },
+    { key: "pcEa", label: "PC대수", type: "number" },
+    { key: "tmUserCd", label: "담당자이름", type: "string" },
+    { key: "sendNum", label: "우체국등기번호", type: "string" },
+    { key: "zipNum", label: "우편번호", type: "string" },
+    { key: "addr", label: "한글사업장주소", type: "string" },
+    { key: "remark", label: "비고", type: "string" },
+    { key: "areaNm", label: "지역구분", type: "string" },
+    { key: "custTypNm", label: "고객구분", type: "string" },
+    { key: "siteGbNm", label: "사이트구분", type: "string" },
+    { key: "staffCnt", label: "직원수", type: "string" },
+];
+```
+
+
+세번째 단계인 데이터 미리보기 과정에서는 사용자가 업로드한 엑셀 파일의 데이터를 미리보기 할 수 있도록 유도합니다.
+
+![엑셀컨버팅-Step3](/post/excel-converter/excel-converter-04.png?w=1000)
+
+최종단계에서는 init 함수에 주입한 onSave 함수를 호출하여 사용자가 업로드한 엑셀 파일의 데이터를 저장할수 있습니다.
+
+
+### 오늘은 AXFrame의 플러그인 중에 하나인 엑셀컨버터를 소개했습니다.
+
+액시스제이가 만드는 솔루션은 누구에게도 부끄럽지 않은 솔루션이 되도록 매일매일 다짐하고 노력하고 있습니다. 저희와 함께 좀 더 모두가 편리한 업무환경을 만들어 나아가길 원하시는 분이라면 언제든지 연락 주세요.
+아주 작은 일이라도 온 힘을 다하고 끝이 시작될 수 있게 하겠습니다.
+
+**데모문의 : 장기영 (sales@axisj.com)**
+
+
+
+
+
+

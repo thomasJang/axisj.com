@@ -3,14 +3,15 @@
     "axisj": "AXISJ",
     "notice": "Notice",
     "service": "Service",
-    "solution": "AXFrame",
+    "solution": "AXBoot",
     "design": "Design",
     "contact": "Contact Us",
     "group": {
-        "lang": "Select Language"
+      "lang": "Select Language"
     },
     "blog": {
-        "title": "AXISJ Blog"
+      "label": "Blog",
+      "title": "AXISJ Blog"
     }
   },
 
@@ -20,11 +21,9 @@
       "hero-title-1": "Pioneering a dot",
       "hero-title-p-1": "It all starts with a small dream...",
       "hero-title-2": "Connecting the dots",
-      "hero-title-p-2":
-      "The belief that the dots of the present connect to the future makes our hearts beat...",
+      "hero-title-p-2": "The belief that the dots of the present connect to the future makes our hearts beat...",
       "hero-title-3": "We are a dot",
-      "hero-title-p-3":
-      "The moment all the values \u200B\u200Bin the world are connected, we get an amazing experience.",
+      "hero-title-p-3": "The moment all the values \u200B\u200Bin the world are connected, we get an amazing experience.",
       "hero-title-4": "A dot is a world",
       "hero-title-p-4": "One dot world. AXISJ",
       "@metadata": {
@@ -46,8 +45,7 @@
     },
     "symbol": {
       "title-ci": "CI",
-      "ci-desc":
-      "A point is a world. We all have our own universe. The steps that took one step forward in the world of IT became a trajectory. Today, we present an amazing experience to you starting with 'Hello World'. We start with infinite possibilities.",
+      "ci-desc": "A point is a world. We all have our own universe. The steps that took one step forward in the world of IT became a trajectory. Today, we present an amazing experience to you starting with 'Hello World'. We start with infinite possibilities.",
       "title-color-primary": "Primary Colors",
       "color-primary-1": "Supernova Red",
       "color-primary-2": "Space Blue",
@@ -57,6 +55,42 @@
       "color-wild-2": "Leaf Green",
       "color-wild-3": "Sandy Brown",
       "color-wild-4": "Sky Blue"
+    },
+    "service": {
+      "title-service": "Service",
+      "service-1-title": "B2B Solution Development",
+      "service-1-desc": "Our B2B solution is an innovative, technology-driven business optimization solution that tailors development to meet the unique requirements of our customers. It offers excellent security and stability, flexible scalability, efficient integration with various systems, user-centric advanced UI/UX design, data-driven intelligent decision support through analysis and intelligence, along with continuous upgrades and effective technical support to enhance our clients' business performance and foster sustained growth.",
+      "service-2-title": "IT Service",
+      "service-2-desc": "We provide innovative and customized solutions by completely handling our clients' IT tasks, sensitively responding to industry trends, and utilizing the latest technologies to meet their demands. Demonstrating excellent expertise in various IT service areas, including website and app development, we maximize clients' business outcomes. Additionally, our IT services, built on a foundation of stability and reliability, have gained recognition as trustworthy partners. Adhering to the latest technologies and industry standards, We securely process data and continuously build trust through outstanding technical support and effective communication with our clients.",
+      "service-3-title": "Consulting",
+      "service-3-desc": "Our company takes pride in its team of accomplished professionals, each boasting over 20 years of industry experience. Leveraging this wealth of expertise, we provide tailored education programs to meet our clients' unique needs. Specifically, AXBoot education aims to enhance our clients' business efficiency and boost their understanding and confidence in their tasks. We strive to elevate developer satisfaction by offering customized training programs tailored to our clients' situations, ultimately enhancing corporate productivity and achieving higher levels of software development excellence."
+    },
+    "axframe": {
+      "tit": "AXBoot",
+      "desc": "AXBoot is a React-based web app development framework that enables the rapid and easy construction of high-quality web applications. This framework leverages the latest technologies in frontend development, such as React, TypeScript, Zustand, and AntDesign, providing developers with an enjoyable working experience. AXFrame supports developers in quickly building polished applications by offering essential core modules for web application development as presets.      In particular, AXFrame provides UI-related features that maximize user convenience, including multilingual extension and theme extension. Among these features, the tab navigation functionality maintains the user's input state for each tab, offering a convenient user experience previously unexplored, seamlessly integrated with the browser's history. If you are preparing for a new project, we recommend exploring AXFrame for your development needs",
+      "use-case": {
+        "title": "AXBoot UseCases",
+        "planeat": {
+          "title": "PlanEAT Choice",
+          "customer": "SAMSUNG, IMTSoft",
+          "desc": "PlanEAT Choice is a Samsung Group meal management solution designed for Samsung Electronics employees. We began preparing for the project in the second half of 2022 and successfully concluded it in December 2023. The project consists of ASP (Catering Company Administrator), PORTAL (Employee Portal), and a mobile app. Due to the need for separate instances for each Samsung Group company, the project was considered a blockbuster in terms of scale and installation complexity.      This extensive project provided an excellent opportunity to apply various features of AXFrame, demonstrating its effectiveness in a large-scale setting. The solution underwent validation in closed network environments used by diverse users, reaffirming the robustness of AXFrame"
+        },
+        "bh": {
+          "title": "Residential Specialist Communication System",
+          "customer": "SH",
+          "desc": "The Seoul Housing and Urban Corporation has commissioned the development of a specialized communication system for housing improvement targeting vulnerable populations, and the project has officially commenced. The main functionalities include uploading the list of individuals in vulnerable housing situations into the system and enabling the modification of their status. Additionally, the system allows counselors to upload reports on the housing vulnerability status of individuals.      The system is designed to enable separate management of customer lists by designated personnel in each region of Seoul. Furthermore, an overarching administrator role has been implemented to facilitate monitoring of progress in each region. Research and development efforts have been dedicated to studying and implementing program controls based on user roles and permissions."
+        },
+        "tm": {
+          "title": "TeleMarketing Solution",
+          "customer": "WEFOR Inc., AXISJ Inc.",
+          "desc": "We have collaborated with the specialized software sales company, WEFOR Co., Ltd., to develop a telemarketing solution. This solution offers various features tailored for telemarketing activities, with a particular focus on optimizing the user interface/user experience (UI/UX) to facilitate easy and fast registration of telemarketing interactions between the customer and the agent.      Key functionalities include segment management, allowing telemarketing to be conducted on a segmented basis. An Excel converter is provided to upload customer lists to segments seamlessly. The solution also features telemarketing management capabilities, enabling agents to record interactions with each customer for reference and analysis."
+        },
+        "gms": {
+          "title": "Weightlifting Competition Management System",
+          "customer": "AXISJ Inc., TAEIN Inc.",
+          "desc": "AXISJ previously developed and operated a weightlifting competition management system for the disabled. Based on the previously developed weightlifting competition management system for the disabled, a weightlifting competition management system for the general public was developed.      The new system completely improved the previously inconvenient parts by introducing AXFrame. We further developed an electronic board, timer, and referee screen using WebSocket communication."
+        }
+      }
     },
 
     "contact": {
