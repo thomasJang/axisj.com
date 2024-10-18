@@ -102,5 +102,11 @@
       "naver-map": "Naver Map",
       "daum-map": "Daum Map"
     }
-  }
+  },
+
+  "footer-addr":
+  "13, Yangpyeong-ro 14-gil, Yeongdeungpo-gu, Seoul, Republic of Korea (07222)",
+  "footer-family": "Family Site",
+  "footer-select-1": "AXISJ",
+  "footer-select-2": "AXFrame"
 }
