@@ -62,7 +62,7 @@ export const mdxComponents: MDXComponents = {
     summary: string;
   }) => (
     // Necessary due to a hydration error I can't quite figure out
-    <details {...props}>
+    <details {...(props as any)}>
       {summary && <summary>{summary}</summary>}
       {children}
     </details>
