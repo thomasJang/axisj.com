@@ -37,7 +37,9 @@
     "remark-gfm": "^4.0.0",
     "remark-toc": "^9.0.0",
     "rss-parser": "^3.13.0",
-    "zustand": "^5.0.0"
+    "zustand": "^5.0.0",
+    "@vercel/analytics": "^1.1.1",
+    "@vercel/speed-insights": "^1.0.1"
   },
   "devDependencies": {
     "@types/crypto-js": "^4.2.2",
