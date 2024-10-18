@@ -7,6 +7,7 @@ import { getMessages } from "next-intl/server";
 import { ReactNode } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { unstable_setRequestLocale } from "next-intl/server";
 import "@/styles/globals.scss";
 import "./layout.scss";
 
@@ -62,6 +63,7 @@ export default async function RootLayout({
   children: ReactNode;
   params: { locale: LangType };
 }>) {
+  unstable_setRequestLocale(locale);
   const messages = await getMessages();
 
   return (
