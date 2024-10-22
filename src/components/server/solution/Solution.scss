@@ -1,0 +1,34 @@
+@import "../../../styles/inc/breakpoints";
+
+.solution-section {
+  background: var(--line-gr);
+  padding: 5rem 2rem;
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-bottom: 3rem;
+  }
+
+  .titIcon {
+    font-size: 4rem;
+    padding-bottom: 1rem;
+
+    &.ti1 {}
+    &.ti2 {}
+    &.ti3 {}
+  }
+
+  .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: var(--font-display);
+  }
+
+  p {
+    margin: 1rem 0;
+    color: var(--txt-body);
+    line-height: 1.5;
+    font-size: 0.975rem;
+  }
+}

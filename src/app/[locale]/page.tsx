@@ -6,6 +6,7 @@ import { MainVisual } from "@/components/client/mainVisual/MainVisual";
 import { AXFrame } from "@/components/server/axframe/AXFrame";
 import { Contact } from "@/components/server/contact/Contact";
 import { Service } from "@/components/server/service/Service";
+import { Solution } from "@/components/server/solution/Solution";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { Suspense } from "react";
@@ -29,8 +30,10 @@ export default function HomePage({}: any) {
         <Symbol />
         <a id={"service"} className={"anchorPoint"} />
         <Service />
+        <Solution />
         <a id={"axframe"} className={"anchorPoint"} />
         <AXFrame />
+
         <a id={"contact"} className={"anchorPoint"} />
         <Contact />
       </div>

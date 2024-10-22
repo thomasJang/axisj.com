@@ -65,6 +65,15 @@
       "service-3-title": "Consulting",
       "service-3-desc": "Our company takes pride in its team of accomplished professionals, each boasting over 20 years of industry experience. Leveraging this wealth of expertise, we provide tailored education programs to meet our clients' unique needs. Specifically, AXBoot education aims to enhance our clients' business efficiency and boost their understanding and confidence in their tasks. We strive to elevate developer satisfaction by offering customized training programs tailored to our clients' situations, ultimately enhancing corporate productivity and achieving higher levels of software development excellence."
     },
+    "solution": {
+      "title-solution": "Solution",
+      "solution-1-title": "AXBoot",
+      "solution-1-desc": "AXBoot is a highly modular Web Application Framework (WAF) that provides a set of built-in UI components, tools, and libraries for building web applications with scalability and ease of maintenance.",
+      "solution-2-title": "APISync",
+      "solution-2-desc": "APISync is an API platform for building and consuming APIs. It simplifies each stage of the API lifecycle and streamlines collaboration, enabling the creation of better APIs more quickly.",
+      "solution-3-title": "GMS",
+      "solution-3-desc": "GMS (Game Management System) is an innovative solution for comprehensive management of sports operations. It provides a system optimized for each sport, streamlining game preparation and execution while maximizing operational efficiency."
+    },
     "axframe": {
       "tit": "AXBoot",
       "desc": "AXBoot is a React-based web app development framework that enables the rapid and easy construction of high-quality web applications. This framework leverages the latest technologies in frontend development, such as React, TypeScript, Zustand, and AntDesign, providing developers with an enjoyable working experience. AXFrame supports developers in quickly building polished applications by offering essential core modules for web application development as presets.      In particular, AXFrame provides UI-related features that maximize user convenience, including multilingual extension and theme extension. Among these features, the tab navigation functionality maintains the user's input state for each tab, offering a convenient user experience previously unexplored, seamlessly integrated with the browser's history. If you are preparing for a new project, we recommend exploring AXFrame for your development needs",
