@@ -19,28 +19,28 @@ export function MobileMenu({}: Props) {
       key: "axisj",
       label: t("router.axisj"),
       onClick: () => {
-        router.push(`/#AXISJ`);
+        router.push(`/#axisj`);
       },
     },
     {
       key: "service",
       label: t("router.service"),
       onClick: () => {
-        router.push(`/#SERVICE`);
+        router.push(`/#service`);
       },
     },
     {
       key: "solution",
       label: t("router.solution"),
       onClick: () => {
-        router.push(`/#AXFRAME`);
+        router.push(`/#axframe`);
       },
     },
     {
       key: "contact",
       label: t("router.contact"),
       onClick: () => {
-        router.push(`/#CONTACT`);
+        router.push(`/#contact`);
       },
     },
     {

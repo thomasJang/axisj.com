@@ -18,6 +18,8 @@ export default function HomePage({}: any) {
 
   return (
     <main>
+      <h1 style={{ position: "fixed" }}>The AXISJ - www.axisj.com</h1>
+
       <a id={"HOME"} className={"anchorPoint home"} />
       <Suspense>
         <MainVisual />
