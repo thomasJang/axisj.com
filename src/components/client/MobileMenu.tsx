@@ -33,7 +33,7 @@ export function MobileMenu({}: Props) {
       key: "solution",
       label: t("router.solution"),
       onClick: () => {
-        router.push(`/#axframe`);
+        router.push(`/#axboot`);
       },
     },
     {

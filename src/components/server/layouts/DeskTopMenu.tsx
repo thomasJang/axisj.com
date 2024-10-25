@@ -20,7 +20,7 @@ export function DeskTopMenu({}: Props) {
     },
     {
       pathname: "/",
-      hash: "solution",
+      hash: "axboot",
       label: t("router.solution"),
     },
     {

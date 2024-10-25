@@ -33,7 +33,7 @@ export default function HomePage({}: any) {
         <a id={"service"} className={"anchorPoint"} />
         <Service />
         <Solution />
-        <a id={"axframe"} className={"anchorPoint"} />
+        <a id={"axboot"} className={"anchorPoint"} />
         <AXFrame />
 
         <a id={"contact"} className={"anchorPoint"} />
