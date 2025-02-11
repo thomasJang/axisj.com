@@ -30,12 +30,12 @@ export function Contact({}: Props) {
                 <dl>
                   <dt>{t("address")}</dt>
                   <dd>
-                    <p>서울 영등포구 양평로14길 13 3층</p>
-                    <p>3F, 13, Yangpyeong-ro 14-gil, Yeongdeungpo-gu, Seoul.</p>
+                    <p>서울 영등포구 선유로49길 4, 604호</p>
+                    <p>604, 4, Seonyu-ro 49-gil, Yeongdeungpo-gu, Seoul</p>
                   </dd>
                   <dt>{t("zipcode")}</dt>
                   <dd>
-                    <p>07222</p>
+                    <p>07208</p>
                   </dd>
                   <dt>{t("tel")}</dt>
                   <dd>
@@ -57,7 +57,7 @@ export function Contact({}: Props) {
                   <Button
                     icon={<LinkOutlined />}
                     onClick={() => {
-                      window.open("https://naver.me/xiw19Q1h", "_blank");
+                      window.open("https://naver.me/IGJlDRm6", "_blank");
                     }}
                   >
                     {t("naver-map")}
@@ -65,7 +65,7 @@ export function Contact({}: Props) {
                   <Button
                     icon={<LinkOutlined />}
                     onClick={() => {
-                      window.open("https://kko.to/QiXd4lAnyd", "_blank");
+                      window.open("https://kko.kakao.com/ctVFXQ0Moz", "_blank");
                     }}
                   >
                     {t("daum-map")}
