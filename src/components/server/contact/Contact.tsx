@@ -2,6 +2,7 @@
 import { LinkOutlined } from "@ant-design/icons";
 import { Button, Col, Row } from "antd";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import * as React from "react";
 import "./Contact.scss";
 
@@ -19,14 +20,26 @@ export function Contact({}: Props) {
           <Col sm={24} lg={24} xl={{ offset: 2, span: 20 }}>
             <Row
               gutter={[
-                { xs: 16, sm: 16, md: 32, lg: 64 },
-                { xs: 16, sm: 16, md: 64 },
+                { xs: 16, sm: 16, md: 24, lg: 32 },
+                { xs: 16, sm: 16, md: 24 },
               ]}
             >
-              <Col sm={24} md={12}>
-                <img src={"/images/axisj-map.png"} alt={"AXISJ MAP"} style={{ width: "100%", borderRadius: 10 }} />
+              <Col sm={24} md={14}>
+                <Image
+                  src={"/images/axisj-map.png"}
+                  alt={"AXISJ MAP"}
+                  width={1186}
+                  height={1004}
+                  sizes='100vw'
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    borderRadius: 10,
+                  }}
+                  loading={"lazy"}
+                />
               </Col>
-              <Col sm={24} md={12}>
+              <Col sm={24} md={10}>
                 <dl>
                   <dt>{t("address")}</dt>
                   <dd>
@@ -57,7 +70,7 @@ export function Contact({}: Props) {
                   <Button
                     icon={<LinkOutlined />}
                     onClick={() => {
-                      window.open("https://naver.me/IGJlDRm6", "_blank");
+                      window.open("https://naver.me/GQ1QLsIi", "_blank");
                     }}
                   >
                     {t("naver-map")}

@@ -1,7 +1,8 @@
+import { Link } from "@/i18n/routing";
 import { dangerouslySetInnerHTML } from "@/utils/string/dangerouslySetInnerHTML";
 import { Col, Row } from "antd";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/routing";
+import Image from "next/image";
 import * as React from "react";
 import "./AXFrame.scss";
 
@@ -22,10 +23,17 @@ export function AXFrame({}: Props) {
           ]}
         >
           <Col sm={24} md={12}>
-            <img
+            <Image
+              style={{
+                width: "100%",
+                height: "auto",
+                borderRadius: 10,
+              }}
+              loading={"lazy"}
               src={"/images/axframe-isometric.png"}
               alt={"axframe-img.jpg"}
-              style={{ width: "100%", borderRadius: 10 }}
+              width={1220}
+              height={810}
             />
           </Col>
           <Col sm={24} md={12}>
@@ -36,7 +44,19 @@ export function AXFrame({}: Props) {
         <h3>{t("use-case.title")}</h3>
         <div className={"useCaseWrap"}>
           <div className={"useCase"}>
-            <img src={"/images/gms.jpg"} alt={"We"} />
+            <Image
+              style={{
+                width: "100%",
+                height: "auto",
+                borderRadius: 10,
+              }}
+              loading={"lazy"}
+              src={"/images/gms.jpg"}
+              alt={"We"}
+              width={600}
+              height={450}
+              quality={100}
+            />
             <div className={"meta"}>
               <div className={"titles"}>
                 <h5>{t("use-case.gms.title")}</h5>
@@ -51,7 +71,19 @@ export function AXFrame({}: Props) {
           </div>
 
           <div className={"useCase"}>
-            <img src={"/images/wefor.jpg"} alt={"TeleMarketing Solution"} />
+            <Image
+              style={{
+                width: "100%",
+                height: "auto",
+                borderRadius: 10,
+              }}
+              loading={"lazy"}
+              src={"/images/wefor.jpg"}
+              alt={"TeleMarketing Solution"}
+              width={600}
+              height={450}
+              quality={100}
+            />
             <div className={"meta"}>
               <div className={"titles"}>
                 <h5>{t("use-case.tm.title")}</h5>
@@ -66,7 +98,19 @@ export function AXFrame({}: Props) {
           </div>
 
           <div className={"useCase"}>
-            <img src={"/images/bh.jpg"} alt={"SH project"} />
+            <Image
+              style={{
+                width: "100%",
+                height: "auto",
+                borderRadius: 10,
+              }}
+              loading={"lazy"}
+              src={"/images/bh.jpg"}
+              alt={"SH project"}
+              width={600}
+              height={450}
+              quality={100}
+            />
             <div className={"meta"}>
               <div className={"titles"}>
                 <h5>{t("use-case.bh.title")}</h5>
@@ -77,7 +121,20 @@ export function AXFrame({}: Props) {
           </div>
 
           <div className={"useCase"}>
-            <img src={"/images/planeat.jpg"} alt={"PlanEAT Choice"} />
+            <Image
+              style={{
+                width: "100%",
+                height: "auto",
+                borderRadius: 10,
+              }}
+              loading={"lazy"}
+              src={"/images/planeat.jpg"}
+              alt={"PlanEAT Choice"}
+              width={600}
+              height={450}
+              quality={100}
+            />
+
             <div className={"meta"}>
               <div className={"titles"}>
                 <h5>{t("use-case.planeat.title")}</h5>
