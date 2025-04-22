@@ -3,17 +3,15 @@ import { MobileMenu } from "@/components/client/MobileMenu";
 import { OnScrollHeader } from "@/components/client/OnScrollHeader";
 import { LogoAXSymbol } from "@/components/server/common/LogoAXSymbol";
 import { DeskTopMenu } from "@/components/server/layouts/DeskTopMenu";
-import { LangType } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
+import { getLocale, getTranslations } from "next-intl/server";
 import * as React from "react";
 
-interface Props {
-  locale: LangType;
-}
+interface Props {}
 
-export function Header({ locale }: Props) {
-  const t = useTranslations();
+export async function Header({}: Props) {
+  const locale = await getLocale();
+  const t = await getTranslations();
 
   return (
     <>
@@ -34,7 +32,7 @@ export function Header({ locale }: Props) {
               <Link href={`/blog`} className={"hideLg"}>
                 {t("router.blog.label")}
               </Link>
-              <LangSelector size={24} locale={locale} />
+              <LangSelector size={24} />
 
               <MobileMenu />
             </div>

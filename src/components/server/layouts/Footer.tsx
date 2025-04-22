@@ -3,12 +3,13 @@ import { IconInstagram } from "@/components/client/common/IconInstagram";
 import { Col, Divider, Row } from "antd";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
+import { getTranslations } from "next-intl/server";
 import * as React from "react";
 
 interface Props {}
 
-export function Footer({}: Props) {
-  const t = useTranslations();
+export async function Footer({}: Props) {
+  const t = await getTranslations();
   return (
     <div className={"footer"}>
       <div className={"container"}>

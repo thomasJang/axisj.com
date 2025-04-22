@@ -2,14 +2,15 @@
 
 import { IconLangEn, IconLangKo } from "@/components/icon";
 import { LangType, usePathname, useRouter } from "@/i18n/routing";
+import { useLocale } from "next-intl";
 
 import React from "react";
 
 interface Props {
   size?: number;
-  locale: LangType;
 }
-const LangSelector = ({ locale, size }: Props) => {
+const LangSelector = ({ size }: Props) => {
+  const locale = useLocale();
   const router = useRouter();
   const pathName = usePathname();
 
