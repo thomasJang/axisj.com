@@ -1,11 +1,11 @@
 "use client";
 
-import * as React from "react";
-import styled from "@emotion/styled";
-import { Post } from "@/lib/types";
 import Posts from "@/components/posts-list/Posts";
 import { PostTitle } from "@/components/posts-list/PostTitle";
+import { Post } from "@/app/[locale]/(subpage)/blog/lib/types";
 import { mediaMax } from "@/styles/media";
+import styled from "@emotion/styled";
+import * as React from "react";
 
 interface Props {
   posts: Post[];

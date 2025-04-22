@@ -1,4 +1,4 @@
-import { Post } from "@/lib/types";
+import { Post } from "@/app/[locale]/(subpage)/blog/lib/types";
 
 import styles from "./navigation.module.css";
 import { Link } from "@/i18n/routing";

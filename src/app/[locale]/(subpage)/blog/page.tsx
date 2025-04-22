@@ -1,18 +1,10 @@
-import { PostListRSC } from "@/components/posts-list/rsc";
-import React, { Suspense } from "react";
+import React from "react";
+import { PostList } from "./components/PostList";
 
-const Blog = async () => {
+export default async function Page({}: any) {
   return (
-    <Suspense
-      fallback={
-        <div className={"page-container"}>
-          <div className={"loader"}></div>
-        </div>
-      }
-    >
-      <PostListRSC paginate={true} />
-    </Suspense>
+    <div className={"container"}>
+      <PostList />
+    </div>
   );
-};
-
-export default Blog;
+}

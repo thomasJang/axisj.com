@@ -1,5 +1,5 @@
 import { PostList } from "@/components/posts-list/PostList";
-import getPosts from "@/lib/get-posts";
+import getPosts from "@/app/[locale]/(subpage)/blog/lib/get-posts";
 
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 

@@ -1,4 +1,4 @@
-import getPosts from "@/lib/get-posts";
+import getPosts from "@/app/[locale]/(subpage)/blog/lib/get-posts";
 import { PostBody } from "@/mdx/post-body";
 import styles from "./page.module.css";
 import printDate from "@/utils/printDate";

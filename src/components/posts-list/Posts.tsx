@@ -4,7 +4,7 @@ import { Link } from "@/i18n/routing";
 import { SMixinFlexColumn, SMixinFlexRow } from "@/styles/emotion";
 import { useLocale } from "next-intl";
 import { useState } from "react";
-import type { Post } from "@/lib/types";
+import type { Post } from "@/app/[locale]/(subpage)/blog/lib/types";
 import styled from "@emotion/styled";
 import printDate from "@/utils/printDate";
 import { mediaMax } from "@/styles/media";

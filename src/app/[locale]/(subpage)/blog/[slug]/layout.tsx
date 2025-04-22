@@ -1,4 +1,4 @@
-import getPosts from "@/lib/get-posts";
+import getPosts from "@/app/[locale]/(subpage)/blog/lib/get-posts";
 import { Metadata } from "next";
 import styles from "./layout.module.css";
 

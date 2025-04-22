@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export const metadata = {
   title: "AXISJ Blog",
   description: "AXISJ Blog",
@@ -9,7 +11,7 @@ export const metadata = {
 export default function BlogLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
-  return <article>{children}</article>;
+  return <main>{children}</main>;
 }
