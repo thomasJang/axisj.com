@@ -4,7 +4,7 @@ export type Post = {
   writer: string;
   slug: string;
   date: string;
-  tags: string[];
+  tags?: string[];
   description: string;
   body: string;
   lastModified?: number;

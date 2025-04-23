@@ -41,7 +41,12 @@ export const getPosts = cache(async (includeThirdPartyPosts?: boolean) => {
           lastModified = new Date(commitInfo[0].commit.committer.date).getTime();
         }
 
-        return { ...data, body: content, lastModified } as Post;
+        return {
+          ...data,
+          tags: data.tags ? data.tags.split(",").map((s: string) => s.trim()) : undefined,
+          body: content,
+          lastModified,
+        } as Post;
       }),
   );
 
